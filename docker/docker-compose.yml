@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+
+# ------> composer ------>
+    composer_1sv25msjmqdfh5h:
+        container_name: composer_1sv25msjmqdfh5h
+        image: composer:latest
+        volumes:
+            - .././:/app
+        command: ["composer", "update"]
+# <------ composer <------
+
+# ------> mariadb ------>
+    mariadb_1sv25msjmqdfh5i:
+        container_name: mariadb_1sv25msjmqdfh5i
+        image: mariadb:latest
+        restart: always
+        ports:
+            - 3306:3306
+        volumes:
+            - ../../.database/my_app:/var/lib/mysql
+#            - ./mariadb/conf/mariadb:/etc/mysql
+        environment:
+            MYSQL_DATABASE: sridar
+            MYSQL_USER: sridar
+            MYSQL_PASSWORD: sridar
+            MYSQL_ROOT_PASSWORD: sridar
+# <------ mariadb <------
+
+# ------> symfony ------>
+    symfony_1sv25msjmqdfh5j:
+        container_name: symfony_1sv25msjmqdfh5j
+        build: ./symfony
+        image: skyflow/symfony
+        restart: always
+        working_dir: /sridar
+        ports:
+            - 80:80
+        volumes:
+            - ../:/sridar
+            - ./symfony/conf/apache2:/etc/apache2
+            - ./symfony/conf/php7/php.ini:/etc/php7/php.ini
+# <------ symfony <------

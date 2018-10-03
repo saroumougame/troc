@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="MariaDB - sridar@0.0.0.0" uuid="d14980d9-a533-44ad-9e5b-e10cffb4e739">
+      <driver-ref>java.sql.Driver</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://0.0.0.0:3306/sridar</jdbc-url>
+    </data-source>
+  </component>
+</project>
