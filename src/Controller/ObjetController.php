@@ -49,8 +49,12 @@ class ObjetController extends AbstractController
             $echange->setObjectAchteur($ObjetAcheteur);
             $echange->setUserVendeur($objet->getUser());
             $echange->setObjectVendeur($objet);
+            $echange->setStatue(1);
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($echange);
+            $entityManager->flush();
 
-dump($echange);
+            return $this->redirect($this->generateUrl('home'));
         }
 
         return $this->render('objet/detailObjet.html.twig', array(

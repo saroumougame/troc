@@ -34,7 +34,7 @@ class Echange
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="echange")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Objet", inversedBy="echange")
      */
     protected $objectVendeur;
 
