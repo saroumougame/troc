@@ -106,6 +106,12 @@ class Objet
     }
 
 
+    public function __toString()
+    {
+        return (string) $this->getNom();
+    }
+
+
 //protected $photo;
 
 }

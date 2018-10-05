@@ -9,9 +9,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Objet;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Echange;
 
 
 
@@ -24,12 +26,11 @@ class indexController extends AbstractController
     {
 
 
+        $allObjet = $this->getDoctrine()->getRepository(Objet::class)->findAll();
 
-
-
-
-
-        return $this->render('home/index.html.twig', array('id' => 'lol'));
+        return $this->render('home/index.html.twig',
+            array('allObjet' => $allObjet)
+        );
     }
 
 

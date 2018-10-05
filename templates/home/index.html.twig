@@ -1,10 +1,65 @@
 {% extends 'base.html.twig' %}
 
 
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/plugins/bootstrap/css/bootstrap.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/plugins/morrisjs/morris.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/css/main.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/css/color_skins.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/css/ecommerce.css') }}"/>
+    {% endblock %}
+
 
 {% block content %}
 
 
-    home page
+    <section class="content ecommerce-page">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Produit
+                        <small>Propose un troc</small>
+                    </h2>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <ul class="breadcrumb float-md-right">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i>Accueil</a></li>
+                        <li class="breadcrumb-item"><a href="ec-dashboard.html">Groupe</a></li>
+                        <li class="breadcrumb-item active">Produit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row clearfix">
+
+                {% for allObjets in allObjet %}
+                    <div class="col-lg-3 col-md-4 col-sm-12">
+                        <div class="card product_item">
+                            <div class="body">
+                                <div class="cp_img">
+                                    <img src="{{ asset('assets/Oreo/images/ecommerce/1.png') }}" alt="Product" class="img-fluid" />
+                                    <div class="hover">
+                                        <a href="{{ path('objet_detail', {'objet': allObjets.id}) }}" class="btn btn-primary waves-effect"><i class="zmdi zmdi-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product_details">
+                                    <h5><a href="ec-product-detail.html">{{ allObjets.nom }}</a></h5>
+                                    <ul class="product_price list-unstyled">
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+        </div>
+    </section>
+
 
 {% endblock %}

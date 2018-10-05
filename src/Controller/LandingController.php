@@ -24,9 +24,6 @@ class LandingController extends AbstractController
     {
 
 
-
-
-
         return $this->render('Landing/index.html.twig', array('msg' => 'lol'));
     }
 
