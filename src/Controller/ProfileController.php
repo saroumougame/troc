@@ -31,7 +31,7 @@ class ProfileController extends AbstractController
      */
     public function indexAction(){
 
-
+//@TODO Editer son profile
 
 }
 
@@ -64,7 +64,6 @@ class ProfileController extends AbstractController
              $entityManager->persist($formData);
              $entityManager->flush();
         }
-
 
         return $this->render('profile/addObject.html.twig', array(
             'form' => $form->createView()
@@ -138,14 +137,10 @@ class ProfileController extends AbstractController
      * @Route("/object/delete/{objet}", name="delete_object")
      */
     public function deleteAction(Objet $objet){
-
-
-
+//@TODO securiser le delete
         $entityManager = $this->getDoctrine()->getManager();
         $entityManager->remove($objet);
         $entityManager->flush();
-
-
 
     }
 

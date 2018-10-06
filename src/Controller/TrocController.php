@@ -34,16 +34,38 @@ class TrocController extends AbstractController
 
 
     /**
-     * @Route("/demande/{objetVendeur}", name="troc_demande")
+     * @Route("/demande", name="troc_echange")
      */
-    public function demandeTrocAction(Objet $objetVendeur){
+    public function EchangeByUserAction(){
 
-        dump($objetVendeur);
+    $user =  $this->getUser();
 
-        $formDemandeTroc = $objetController->getForm($objetVendeur->getId());
+    $demandeByUser = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userAcheteur'=> $user));
 
+        return $this->render('echange/echangeByUser.html.twig', array(
+            'demandeByUser' => $demandeByUser
+
+        ));
 
     }
+
+
+    /**
+     * @Route("/proposition", name="troc_proposition")
+     */
+    public function EchangeByVendeurAction(){
+
+        $user =  $this->getUser();
+
+        $demandeByVendeur = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userVendeur'=> $user));
+
+        return $this->render('echange/echangeByVendeur.html.twig', array(
+            'demandeByVendeur' => $demandeByVendeur
+
+        ));
+
+    }
+
 
 
 }
