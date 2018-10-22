@@ -15,6 +15,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class User extends BaseUser
 {
+    //@Todo faire les assert
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
