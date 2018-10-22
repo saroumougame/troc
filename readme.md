@@ -27,6 +27,8 @@ Symfony :
 
 ```
 
+skyflow C:update
+
 skyflow compose:symfony:sh  // Acces au container symfony 
 
 bin/console doctrine:database:create --if-not-exists // Cree la BD
