@@ -16,10 +16,10 @@ bin/console doctrine:database:create --if-not-exists // penser a conf le .env
 
 ##Local Environment
 
-    App URL : http://localhost:8889/
-    MariaDB url: 0.0.0.0:3306
-    Db : coding`
-    DATABASE_URL=mysql://coding:coding@0.0.0.0:3306/coding
+    App URL : http://localhost:80/
+    MariaDB url: http://localhost:3306/
+    Db : sridar
+    DATABASE_URL=mysql://sridar:sridar@<MARIA_DB CONTAINER ID/sridar
 
 ###Commande Utile
 
