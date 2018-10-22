@@ -39,25 +39,34 @@
                                 <div class="preview col-lg-4 col-md-12">
                                     <div class="preview-pic tab-content">
                                         <div class="tab-pane active" id="product_1"><img src="{{ asset('assets/Oreo/images/ecommerce/1.png') }}" class="img-fluid" /></div>
-                                        {#<div class="tab-pane" id="product_2"><img src="assets/images/ecommerce/2.png" class="img-fluid"/></div>#}
-                                        {#<div class="tab-pane" id="product_3"><img src="assets/images/ecommerce/3.png" class="img-fluid"/></div>#}
-                                        {#<div class="tab-pane" id="product_4"><img src="assets/images/ecommerce/4.png" class="img-fluid"/></div>#}
-                                        {#<div class="tab-pane" id="product_5"><img src="assets/images/ecommerce/5.png" class="img-fluid"/></div>#}
                                     </div>
-                                    {#<ul class="preview-thumbnail nav nav-tabs">#}
-                                    {#<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#product_1"><img src="{{ asset('assets/Oreo/images/ecommerce/1.png') }}" /></a></li>#}
-                                    {#<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_2"><img src="assets/images/ecommerce/2.png" /></a></li>#}
-                                    {#<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_3"><img src="assets/images/ecommerce/3.png" /></a></li>#}
-                                    {#<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_4"><img src="assets/images/ecommerce/4.png" /></a></li>#}
-                                    {#<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_5"><img src="assets/images/ecommerce/5.png" /></a></li>#}
-                                    {#</ul>#}
                                 </div>
                                 <div class="details col-lg-8 col-md-12">
                                     <h3 class="product-title m-b-0">{{ objet.nom }}</h3>
                                     <hr>
+
+
+
                                     <p class="product-description">{{ objet.description }}</p>
-                                    {{ form(formDemandeTroc) }}
+
+                                    {#{{ form(formDemandeTroc) }}#}
+                                    {{ form_start(formDemandeTroc) }}
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            {{ form_row(formDemandeTroc.id) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 right">
+                                        {{ form_row(formDemandeTroc.submit) }}
+                                    </div>
+
+                                    {{ form_end(formDemandeTroc) }}
+
                                 </div>
+
+
+
                             </div>
                         </div>
                     </div>
