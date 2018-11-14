@@ -9,6 +9,9 @@
 
 namespace App\Entity\Traits;
 
+use Gedmo\Mapping\Annotation as Gedmo;
+use Doctrine\ORM\Mapping as ORM;
+
 trait TimestampableTrait{
 
 
@@ -30,9 +33,19 @@ trait TimestampableTrait{
 
 
     /**
+     * @var User $createdBy
+     *
+     * @Gedmo\Blameable(on="create")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User")
+     * @ORM\JoinColumn(referencedColumnName="id")
+     */
+    private $createdBy;
+
+
+    /**
      * @return DateTime
      */
-    public function getCreated(): DateTime
+    public function getCreated()//: DateTime
     {
         return $this->created;
     }
@@ -41,7 +54,7 @@ trait TimestampableTrait{
     /**
      * @return DateTime
      */
-    public function getUpdated(): DateTime
+    public function getUpdated()//: DateTime
     {
         return $this->updated;
     }
@@ -49,7 +62,7 @@ trait TimestampableTrait{
     /**
      * @param DateTime $created
      */
-    public function setCreated(DateTime $created): void
+    public function setCreated($created)//: void
     {
         $this->created = $created;
     }
@@ -57,7 +70,7 @@ trait TimestampableTrait{
     /**
      * @param DateTime $updated
      */
-    public function setUpdated(DateTime $updated): void
+    public function setUpdated($updated)//: void
     {
         $this->updated = $updated;
     }

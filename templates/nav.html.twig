@@ -2,9 +2,10 @@
 
 {% block nav %}
     <li><a href="{{ path('home') }}"><i class="zmdi zmdi-home"></i> Accueil</a></li>
+    <li><a href="{{ path('show_object') }}"><i class="zmdi zmdi-accounts-list"></i>Mon Inventaire</a></li>
     <li><a href="{{ path('troc_proposition') }}"><i class="zmdi zmdi-account-box"></i>Propositions Reçue</a></li>
     <li><a href="{{ path('troc_echange') }}"><i class="zmdi zmdi-account-box-mail"></i>Mes Demandes</a></li>
-    <li><a href="{{ path('profile') }}"><i class="zmdi zmdi-account-box-mail"></i>Mon profile</a></li>
+    <li><a href="{{ path('profile_show') }}"><i class="zmdi zmdi-account-box-mail"></i>Mon profile</a></li>
 {% endblock %}
 
 

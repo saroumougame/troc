@@ -5,3 +5,9 @@ fos_user:
     from_email:
         address: "vincent@vfac.fr"
         sender_name: "vincent@vfac.fr"
+
+
+
+
+parameters:
+    path_photo_profil: '%kernel.project_dir%/public/assets/files'

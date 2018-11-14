@@ -56,13 +56,52 @@ class TrocController extends AbstractController
     public function EchangeByVendeurAction(){
 
         $user =  $this->getUser();
-
+        dump($user);
         $demandeByVendeur = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userVendeur'=> $user));
 
+
+        dump($demandeByVendeur);
         return $this->render('echange/echangeByVendeur.html.twig', array(
             'demandeByVendeur' => $demandeByVendeur
 
         ));
+
+    }
+
+
+
+    /**
+     * @Route("/accepter/{echange}", name="accepter_proposition")
+     *
+     */
+    public function accepterEchangeAction(Echange $echange){
+        dump($echange);
+
+        $echange->setStatue(2);
+        $em = $this->getDoctrine()->getManager();
+
+        $em->merge($echange);
+        $em->flush();
+
+
+       return $this->redirectToRoute('troc_proposition');
+
+    }
+
+
+    /**
+     * @Route("/refuser/{echange}", name="refuser_proposition")
+     *
+     */
+    public function refuserEchangeAction(Echange $echange){
+
+        $em = $this->getDoctrine()->getManager();
+
+        $em->remove($echange);
+        $em->flush();
+
+
+        return $this->redirectToRoute('troc_proposition');
 
     }
 

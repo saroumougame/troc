@@ -33,6 +33,8 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 class ObjetController extends AbstractController
 {
 
+
+
     /**
      * @Route("/detail/{objet}", name="objet_detail")
      */

@@ -1,0 +1,140 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block content %}
+    <section class="content blog-page">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Mon profil
+                    </h2>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <ul class="breadcrumb float-md-right">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i>Profil</a></li>
+                        <li class="breadcrumb-item active"><a href="blog-dashboard.html">Profil</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <div class="card profile-header">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-12">
+                                    <div class="profile-image">
+
+                                        {% if app.user.namePhoto is not null %}
+                                            <img src="{{ asset('assets/files/')~ app.user.namePhoto  }}" alt="">
+                                        {% else %}
+                                            <div class="profile-image"> <img src="{{ asset('assets/Oreo/images/profile_av.jpg') }}" alt=""> </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <div class="pl-2">
+                                        <h4 class="m-t-0 m-b-0">{{ app.user.username }}</h4>
+                                        <p>email: {{ app.user.email }} </p>
+                                        {#<p>Nombre d'évenement ajouter par vous: {{ nbEvent }} </p>#}
+                                        {#{% if app.user.entreprise  is null %}#}
+
+                                            {#Vous n'avez pas d'entreprise#}
+                                            {#Attribuer vous une entreprise dans changer mes informations<br>#}
+                                            {#Si elle n'existe pas cree la votre#}
+
+                                        {#{% else %}#}
+                                            {#<p><strong>Entreprise: </strong> {{ app.user.entreprise.nom }}</p>#}
+                                        {#{% endif %}#}
+                                    </div>
+
+                                    <div>
+                                        <button class="btn btn-primary btn-round " data-toggle="modal" data-target="#UserInfoModal">Changer mes information</button>
+                                        <br />
+                                        <a href="{{ path('fos_user_change_password') }}"><button class="btn btn-primary btn-round btn-simple">Changer de mot de passe</button></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-12 right-box">
+                    <div class="card">
+
+                    </div>
+                    <div class="card">
+                        <div class="header">
+                            Mes Ventes
+                            <hr>
+                            {#{% for events in eventUser %}#}
+                                {#<div class="event-name b-primary row">#}
+
+                                    {#<div class="col-2 text-center">#}
+
+                                        {#<a href="">#}
+                                            {#{{ events.datedebut|date("F jS") }}#}
+                                        {#</a>#}
+
+                                        {#<h4>11<span>Dec</span><span>2017</span></h4>#}
+                                    {#</div>#}
+                                    {#<div class="col-10">#}
+                                        {#<h5>{{ events.groupe.nom }}</h5>#}
+                                        {#<h6>{{ events.titre }}</h6>#}
+                                        {#<p>{{ events.message|slice(1, 20) }}...</p>#}
+                                        {#<address><i class="zmdi zmdi-pin"></i> {{ events.adress }}</address>#}
+                                    {#</div>#}
+                                {#</div>#}
+
+                            {#{% endfor %}#}
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="modal fade" id="UserInfoModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="title" id="defaultModalLabel">Modifier mon mail</h4>
+                </div>
+                <div class="modal-body">
+                    {{ form_start(formUser) }}
+                    {{ form_errors(formUser) }}
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group form-">
+                            {{ form_row(formUser.email) }}
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            {{ form_row(formUser.photo) }}
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 right">
+                        {{ form_row(formUser.submit) }}
+                    </div>
+
+                    {{ form_end(formUser) }}
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

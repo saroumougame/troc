@@ -3,9 +3,12 @@
 
 namespace App\Entity;
 
-use FOS\UserBundle\Model\User as BaseUser;
-use Doctrine\ORM\Mapping as ORM;
 
+use App\Entity\Traits\TimestampableTrait;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
@@ -39,6 +42,20 @@ class Objet
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="object")
      */
     private $user;
+
+    /**
+     * Many Objet have Many Groups.
+     * @ORM\ManyToMany(targetEntity="Tag", inversedBy="objets")
+     */
+    private $tags;
+
+
+
+
+
+    public function __construct() {
+        $this->tags = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
 
     /**
@@ -113,5 +130,12 @@ class Objet
 
 
 //protected $photo;
+
+ use TimestampableTrait;
+
+
+
+
+
 
 }

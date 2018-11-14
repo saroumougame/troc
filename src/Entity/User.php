@@ -23,11 +23,14 @@ class User extends BaseUser
      */
     protected $id;
 
+
+
+
     public function __construct()
     {
         parent::__construct();
         $this->objet = new ArrayCollection();
-// your own logic
+
     }
 
 
@@ -103,6 +106,11 @@ class User extends BaseUser
 //    {
 //        return $this->objet;
 //    }
+
+
+
+
+
 
 
 }
