@@ -23,8 +23,8 @@
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
                     <ul class="breadcrumb float-md-right">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Oreo</a></li>
-                        <li class="breadcrumb-item"><a href="ec-dashboard.html">eCommerce</a></li>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i>Home</a></li>
+                        <li class="breadcrumb-item"><a href="ec-dashboard.html">Objet</a></li>
                         <li class="breadcrumb-item active">{{ objet.nom }}</li>
                     </ul>
                 </div>
@@ -38,7 +38,20 @@
                             <div class="row">
                                 <div class="preview col-lg-4 col-md-12">
                                     <div class="preview-pic tab-content">
-                                        <div class="tab-pane active" id="product_1"><img src="{{ asset('assets/Oreo/images/ecommerce/1.png') }}" class="img-fluid" /></div>
+
+
+                                        {% if objet.namePhoto is not null %}
+
+                                            <div class="tab-pane active" id="product_1"><img src="{{ asset('assets/files/photo/objet/')~ objet.namePhoto }}" class="img-fluid" /></div>
+
+                                        {% else %}
+                                            <img src="{{ asset('assets/Oreo/images/ecommerce/1.png') }}" alt="Product" class="img-fluid" />
+                                        {% endif %}
+
+
+
+
+
                                     </div>
                                 </div>
                                 <div class="details col-lg-8 col-md-12">
@@ -50,6 +63,10 @@
                                     <p class="product-description">{{ objet.description }}</p>
 
                                     {#{{ form(formDemandeTroc) }}#}
+
+                                    {% if objet.user.id != app.user.id %}
+
+
                                     {{ form_start(formDemandeTroc) }}
 
                                     <div class="col-sm-6">
@@ -64,6 +81,8 @@
                                     {{ form_end(formDemandeTroc) }}
 
                                 </div>
+
+                                        {% endif %}
 
 
 

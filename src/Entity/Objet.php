@@ -135,6 +135,45 @@ class Objet
 
 
 
+    /**
+     * @Assert\Image(
+     *     allowLandscape = false,
+     *     allowPortrait = false
+     * )
+     */
+    protected $photo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="namephoto", type="string", length=100, nullable=true)
+     */
+    protected $namePhoto;
+
+
+
+    public function setPhoto(File $file = null)
+    {
+        $this->photo = $file;
+    }
+
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+
+
+    public function setNamePhoto($namePhoto)
+    {
+        $this->namePhoto = $namePhoto;
+    }
+
+    public function getNamePhoto()
+    {
+        return $this->namePhoto;
+    }
+
 
 
 
