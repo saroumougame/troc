@@ -47,10 +47,24 @@ class InventaireController extends AbstractController
         if($form->isSubmitted() && $form->isValid()){
             $user = $this->getUser();
             $formData = $form->getData();
+            /* PHOTO */
+dump($formData);
+
+            $file = $formData->getPhoto();
+
+            dump($file);
+            $someNewFilename = 'p_' . $formData->getId() . '_' . $file->getClientOriginalName();
+            dump($someNewFilename);
+            $directory = $this->getParameter('path_photo_objet');
+            $file->move($directory, $someNewFilename);
+            $formData->setNamePhoto($someNewFilename);
+
+            /* END PHOTO */
             $entityManager = $this->getDoctrine()->getManager();
             $formData->setUser($user);
             $entityManager->persist($formData);
             $entityManager->flush();
+           // exit();
 
             return $this->redirectToRoute('show_object');
 
