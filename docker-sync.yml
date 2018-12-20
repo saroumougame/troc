@@ -1,0 +1,5 @@
+version: '2'
+syncs:
+  app-sync:
+    src: './'
+    sync_excludes: ['node_modules', '.gitignore', '.git', 'var/cache', '.idea', '.docker-sync']
