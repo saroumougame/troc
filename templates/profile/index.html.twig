@@ -38,16 +38,6 @@
                                     <div class="pl-2">
                                         <h4 class="m-t-0 m-b-0">{{ app.user.username }}</h4>
                                         <p>email: {{ app.user.email }} </p>
-                                        {#<p>Nombre d'évenement ajouter par vous: {{ nbEvent }} </p>#}
-                                        {#{% if app.user.entreprise  is null %}#}
-
-                                            {#Vous n'avez pas d'entreprise#}
-                                            {#Attribuer vous une entreprise dans changer mes informations<br>#}
-                                            {#Si elle n'existe pas cree la votre#}
-
-                                        {#{% else %}#}
-                                            {#<p><strong>Entreprise: </strong> {{ app.user.entreprise.nom }}</p>#}
-                                        {#{% endif %}#}
                                     </div>
 
                                     <div>
@@ -62,44 +52,129 @@
                     </div>
 
                 </div>
-                <div class="col-lg-4 col-md-12 right-box">
-                    <div class="card">
 
-                    </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
                     <div class="card">
                         <div class="header">
-                            Mes Ventes
-                            <hr>
-                            {#{% for events in eventUser %}#}
-                                {#<div class="event-name b-primary row">#}
+                            <h2><strong>Historique</strong><small>Vente</small></h2>
 
-                                    {#<div class="col-2 text-center">#}
+                        </div>
+                        <div class="body">
+                            <div class="row">
+                                 <div class="body table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                <tr>
+                                                    <th>Mon Objet</th>
+                                                    <th>Objet vendue</th>
+                                                    <th>Username</th>
+                                                    <th>date</th>
 
-                                        {#<a href="">#}
-                                            {#{{ events.datedebut|date("F jS") }}#}
-                                        {#</a>#}
+                                                </tr>
+                                                </thead>
+                                                <tbody>
 
-                                        {#<h4>11<span>Dec</span><span>2017</span></h4>#}
-                                    {#</div>#}
-                                    {#<div class="col-10">#}
-                                        {#<h5>{{ events.groupe.nom }}</h5>#}
-                                        {#<h6>{{ events.titre }}</h6>#}
-                                        {#<p>{{ events.message|slice(1, 20) }}...</p>#}
-                                        {#<address><i class="zmdi zmdi-pin"></i> {{ events.adress }}</address>#}
-                                    {#</div>#}
-                                {#</div>#}
 
-                            {#{% endfor %}#}
+                                                {% for histTrocPropos in histTrocPropo %}
 
+
+                                                    <tr>
+                                                        <th scope="row"><a href="{{ path('objet_detail', {'objet': histTrocPropos.objectVendeur.id}) }}"> {{ histTrocPropos.objectAchteur.nom }}</a>   </th>
+                                                        <td><a href="{{ path('objet_detail', {'objet': histTrocPropos.objectVendeur.id}) }}">{{ histTrocPropos.objectVendeur.nom }}</a> </td>
+                                                        <td>{{ histTrocPropos.userVendeur.username }}</td>
+                                                        <td>date</td>
+                                                    </tr>
+
+
+                                                {% endfor %}
+
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+
+
+
+
+
+
+                            </div>
                         </div>
                     </div>
 
-
-
                 </div>
+
             </div>
         </div>
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2><strong>Historique</strong><small>Acheter</small></h2>
+
+                        </div>
+                        <div class="body">
+                            <div class="row">
+                                <div class="body table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>Mon Objet</th>
+                                            <th>Objet acheter</th>
+                                            <th>Username</th>
+                                            <th>date</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+
+                                        {% for histTrocDemandes in histTrocDemande %}
+
+
+                                            <tr>
+                                                <th scope="row"><a href="{{ path('objet_detail', {'objet': histTrocDemandes.objectVendeur.id}) }}"> {{ histTrocDemandes.objectAchteur.nom }}</a>   </th>
+                                                <td><a href="{{ path('objet_detail', {'objet': histTrocDemandes.objectVendeur.id}) }}">{{ histTrocDemandes.objectVendeur.nom }}</a> </td>
+                                                <td>{{ histTrocDemandes.userVendeur.username }}</td>
+                                                <td>date</td>
+                                            </tr>
+
+
+                                        {% endfor %}
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
     </section>
+
+
+
+
 
 
     <div class="modal fade" id="UserInfoModal" tabindex="-1" role="dialog">

@@ -9,12 +9,12 @@
 namespace App\Controller;
 
 
-
 use App\Entity\Echange;
 use App\Form\ObjetType;
 
 use App\Form\TrocDemandeForm;
 use Symfony\Component\ExpressionLanguage\Tests\Node\Obj;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -27,6 +27,7 @@ use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 
+
 /**
  * @Route("/objet")
  */
@@ -34,18 +35,18 @@ class ObjetController extends AbstractController
 {
 
 
-
     /**
      * @Route("/detail/{objet}", name="objet_detail")
      */
-    public function indexAction(Request $request, Objet $objet){
+    public function indexAction(Request $request, Objet $objet)
+    {
 
 
         $formDemandeTroc = $this->getForm($objet->getId());
         $formDemandeTroc->handleRequest($request);
-        if ($formDemandeTroc->isSubmitted() && $formDemandeTroc->isValid()){
+        if ($formDemandeTroc->isSubmitted() && $formDemandeTroc->isValid()) {
             $data = $formDemandeTroc->getData();
-             $ObjetAcheteur = $data->getId();
+            $ObjetAcheteur = $data->getId();
             $echange = new Echange();
             $echange->setUserAcheteur($ObjetAcheteur->getUser());
             $echange->setObjectAchteur($ObjetAcheteur);
@@ -61,11 +62,11 @@ class ObjetController extends AbstractController
 
         return $this->render('objet/detailObjet.html.twig', array(
             'objet' => $objet,
-            'formDemandeTroc'=> $formDemandeTroc->createView()
+            'formDemandeTroc' => $formDemandeTroc->createView()
         ));
 
 
-}
+    }
 
 
     public function getForm($objetVendeur)
@@ -74,7 +75,7 @@ class ObjetController extends AbstractController
         $objetAcheteur = new Objet();
 
         $form = $this->createFormBuilder($objetAcheteur, array(
-            'action' => $this->generateUrl('objet_detail',array('objet' => $objetVendeur)),
+            'action' => $this->generateUrl('objet_detail', array('objet' => $objetVendeur)),
             'method' => 'POST',
 
         ));
@@ -83,12 +84,11 @@ class ObjetController extends AbstractController
             'query_builder' => function (EntityRepository $repository) {
                 return $repository->createQueryBuilder('o')
                     ->select('o')
-                    ->where('o.user = '.$this->getUser()->getId())
+                    ->where('o.user = ' . $this->getUser()->getId())
                     ->orderBy('o.nom', 'ASC');
             },
             'attr' => array('class' => 'form-control show-tick', 'data-live-search' => 'true'),
         ))
-
             ->add('submit', SubmitType::class,
                 array(
                     'label' => 'Valider',
@@ -101,11 +101,86 @@ class ObjetController extends AbstractController
     }
 
 
+    public function searchObjet()
+    {
+
+
+        $objet = new Objet();
+        $form = $this->getFormSearch($objet);
+
+
+        return $this->render(
+            'objet/searchObjet.html.twig',
+            array('searchObjet' => $form->createView())
+        );
+
+
+    }
+
+
+    public function ObjetbySearch($searchObjet)
+    {
+
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $param = array('nom' => $searchObjet);
+        dump($param);
+        $objet = $entityManager->getRepository(Objet::class)->getObjetBySearch($param);
+
+
+        dump($objet);
+        return $objet;
+
+
+    }
+
+//______
+
+    public function getFormSearch($objet){
 
 
 
+        $form = $this->createFormBuilder($objet, array(
+            'action' => $this->generateUrl('objet_search'),
+            'method' => 'POST',
+        ));
+        $form->add("nom", TextType::class,
+            array(
+                'attr' => array(
+                    'class' => ''
+                )
+            )
+        )
+            ->add('submit', SubmitType::class,
+                array(
+                    'label' => 'Valider',
+                    'attr' => array(
+                        'class' => ''))
+            );
+        return $form->getForm();
+    }
 
 
+
+    /**
+     * @Route("/objet/search/", name="objet_search")
+     */
+    public function searchAction(Request $request)
+    {
+        $objet = new Objet();
+        $form = $this->getFormSearch($objet);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted()) {
+            $info = $form->getData();
+            $newobjet = $this->ObjetBySearch($info->getNom());
+            dump($newobjet);
+
+            return $this->render('objet/searchShow.html.twig', array(
+                'objet' => $newobjet,
+            ));
+        }
+    }
 
 
 }

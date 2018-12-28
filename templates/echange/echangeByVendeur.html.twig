@@ -38,19 +38,8 @@
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card">
                     <div class="header">
-                        <h2><strong>Bordered</strong> Table <small>Add <code>.table-bordered</code> for borders on all sides of the table and cells.</small> </h2>
-                        <ul class="header-dropdown">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else</a></li>
-                                </ul>
-                            </li>
-                            <li class="remove">
-                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
-                            </li>
-                        </ul>
+                        <h2><strong>En attente de confirmation</strong></h2>
+
                     </div>
                     <div class="body table-responsive">
                         <table class="table table-bordered">
@@ -65,19 +54,16 @@
                             </thead>
                             <tbody>
 
-                            {{ dump(demandeByVendeur) }}
                             {% for demandeByVendeurs in demandeByVendeur %}
 
 
                                 <tr>
-                                    <th scope="row">{{ path('objet_detail', {'objet': demandeByVendeurs.objectVendeur.id}) }}"> {{ demandeByVendeurs.objectAchteur.nom }}</a>   </th>
+                                    <th scope="row"><a href="{{ path('objet_detail', {'objet': demandeByVendeurs.objectVendeur.id}) }}"> {{ demandeByVendeurs.objectAchteur.nom }}</a>   </th>
                                     <td><a href="{{ path('objet_detail', {'objet': demandeByVendeurs.objectVendeur.id}) }}">{{ demandeByVendeurs.objectVendeur.nom }}</a> </td>
                                     <td>{{ demandeByVendeurs.userVendeur.username }}</td>
                                     <td>date a mettre gedmo</td>
                                     <td>  <a href="{{ path('accepter_proposition', {'echange': demandeByVendeurs.id}) }}">Accepter</a> <a href="{{ path('refuser_proposition', {'echange': demandeByVendeurs.id}) }}">Refuser</a> </td>
                                 </tr>
-
-
 
 
                             {% endfor %}

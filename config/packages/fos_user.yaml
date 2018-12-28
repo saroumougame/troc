@@ -10,4 +10,5 @@ fos_user:
 
 
 parameters:
-    path_photo_profil: '%kernel.project_dir%/public/assets/files'
+    path_photo_profil: '%kernel.project_dir%/public/assets/files/photo/profile'
+    path_photo_objet: '%kernel.project_dir%/public/assets/files/photo/objet'

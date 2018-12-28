@@ -20,6 +20,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use App\Entity\Echange;
 
 
 
@@ -42,7 +43,18 @@ class ProfileController extends Controller
         $entityManager = $this->getDoctrine()->getManager();
 //        $eventUser = $entityManager->getRepository(Event::class)->findBy(array('useradd' => $this->getUser()->getId()), null, 5);
 //        $nbUser = $this->statUser($User, $entityManager);
-        return $this->render('Profile/index.html.twig', array(
+
+        $demandeByVendeur = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userVendeur'=> $User, 'statue' => 2));
+
+
+
+        $demandeByUser = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userAcheteur'=> $User, 'statue' => 2));
+
+
+
+        return $this->render('profile/index.html.twig', array(
+            'histTrocPropo' => $demandeByVendeur,
+            'histTrocDemande' => $demandeByUser,
 //   'User' => $User,
 //            'eventUser' => $eventUser,
             'formUser' => $formUser->createView(),
@@ -60,18 +72,29 @@ class ProfileController extends Controller
         $formUser = $this->getForm($User);
         $formUser->handleRequest($request);
         if ($formUser->isSubmitted()) {
+
             $UpdateUser = $formUser->getData();
             $User->setUsername($UpdateUser->getUsername());
             $User->setEmail($UpdateUser->getEmail());
+
+            /* ---------- */
+
+
             $file = $UpdateUser->getPhoto();
             $someNewFilename = 'p_' . $User->getId() . '.' . $file->getExtension();
             $directory = $this->getParameter('path_photo_profil');
             $file->move($directory, $someNewFilename);
             $User->setNamePhoto($someNewFilename);
+
+
+            /* ---------- */
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($User);
             $entityManager->flush();
             return $this->redirect($this->generateUrl('profile_show'));
+
+
+
         }
 
         return $this->render('Profile/index.html.twig', array(
@@ -102,7 +125,7 @@ class ProfileController extends Controller
         )
             ->add('photo', FileType::class,
                 array(
-                    'label' => 'Photo Profil ',
+                    'label' => 'Photo Profil',
                     'attr' => array(
                         'class' => 'form-control input-b2'
                     )
@@ -116,6 +139,7 @@ class ProfileController extends Controller
             );
         return $form->getForm();
     }
+
 
 
 

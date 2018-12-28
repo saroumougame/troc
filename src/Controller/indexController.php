@@ -26,7 +26,12 @@ class indexController extends AbstractController
     {
 
 
-        $allObjet = $this->getDoctrine()->getRepository(Objet::class)->findAll();
+
+        $params = array('user' => $this->getUser()->getId());
+
+        $allObjet  = $this->getDoctrine()->getRepository(Objet::class)->getObjetSell($params);
+
+
 
         return $this->render('home/index.html.twig',
             array('allObjet' => $allObjet)

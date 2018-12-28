@@ -56,7 +56,7 @@ class TrocController extends AbstractController
     public function EchangeByVendeurAction(){
 
         $user =  $this->getUser();
-        dump($user);
+
         $demandeByVendeur = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userVendeur'=> $user));
 
 
@@ -104,6 +104,7 @@ class TrocController extends AbstractController
         return $this->redirectToRoute('troc_proposition');
 
     }
+
 
 
 
