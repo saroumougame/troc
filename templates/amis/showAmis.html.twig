@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/plugins/bootstrap/css/bootstrap.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/plugins/morrisjs/morris.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/css/main.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/css/color_skins.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/css/ecommerce.css') }}"/>
+    {% endblock %}
+{% block content %}
+    <section class="content ecommerce-page">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Mes Amis
+                        <small>
+                            {#<a class="btn btn-info btn-round" href="{{ path('add_object') }}">Ajouter un objet</a>#}
+                        </small>
+                        <button class="btn btn-info btn-round" data-toggle="modal" data-target="#defaultModal">Inviter un amis</button></small>
+                    </h2>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <ul class="breadcrumb float-md-right">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i>Accueil</a></li>
+                        <li class="breadcrumb-item"><a href="ec-dashboard.html">Groupe</a></li>
+                        <li class="breadcrumb-item active">Mes objets</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row clearfix">
+                {#{{ form(formAddGroupe) }}#}
+                {% for ami in amis %}
+                    <div class="col-lg-3 col-md-4 col-sm-12">
+                        <div class="card product_item">
+                            <div class="body">
+                                <div class="cp_img">
+                                    {#{{ ami.amis.NamePhoto }}#}
+                                    <img src="{{ asset('assets/files/')~ ami.amis.namePhoto  }}" alt="Product" class="img-fluid" />
+                                    <div class="hover">
+                                        <a href="{{  path('profile_amis_detail',{'user': ami.amis.id}) }}" class="btn btn-primary waves-effect"><i class="zmdi zmdi-plus"></i></a>
+                                        <a href="" class="btn btn-primary waves-effect"><i class="zmdi zmdi-delete"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product_details">
+                                    <h5><a href="ec-product-detail.html">{{ ami.amis.username }}</a></h5>
+                                    <ul class="product_price list-unstyled">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        </div>
+    </section>
+{% endblock %}
