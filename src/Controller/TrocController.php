@@ -24,6 +24,8 @@ use App\Form\EchangeType;
 use Doctrine\ORM\UserRepository;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use App\Service\MailService;
+
 
 
 /**
@@ -74,7 +76,7 @@ class TrocController extends AbstractController
      * @Route("/accepter/{echange}", name="accepter_proposition")
      *
      */
-    public function accepterEchangeAction(Echange $echange){
+    public function accepterEchangeAction(Echange $echange, MailService $mailService){
         dump($echange);
 
         $echange->setStatue(2);
@@ -82,6 +84,9 @@ class TrocController extends AbstractController
 
         $em->merge($echange);
         $em->flush();
+
+
+        $mailService->notificationMail(true, $echange);
 
 
        return $this->redirectToRoute('troc_proposition');
@@ -93,12 +98,14 @@ class TrocController extends AbstractController
      * @Route("/refuser/{echange}", name="refuser_proposition")
      *
      */
-    public function refuserEchangeAction(Echange $echange){
+    public function refuserEchangeAction(Echange $echange, MailService $mailService){
 
         $em = $this->getDoctrine()->getManager();
 
         $em->remove($echange);
         $em->flush();
+
+        $mailService->notificationMail(false, $echange);
 
 
         return $this->redirectToRoute('troc_proposition');
