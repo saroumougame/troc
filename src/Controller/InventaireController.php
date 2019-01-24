@@ -32,7 +32,6 @@ class InventaireController extends AbstractController
      */
     public function addObjetAction(Request $request){
 
-
         $objet = new Objet();
 
         $form = $this->createForm(ObjetType::class, $objet,array(
@@ -40,7 +39,6 @@ class InventaireController extends AbstractController
             'method' => 'POST',
 
         ));
-
 
         $form->handleRequest($request);
 
@@ -63,7 +61,6 @@ class InventaireController extends AbstractController
             $formData->setUser($user);
             $entityManager->persist($formData);
             $entityManager->flush();
-           // exit();
 
             return $this->redirectToRoute('show_object');
 
