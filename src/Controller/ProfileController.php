@@ -118,6 +118,7 @@ class ProfileController extends Controller
         ));
         $form->add("email", TextType::class,
             array(
+                'label' => 'Modifier mon adresse e-mail',
                 'attr' => array(
                     'class' => 'form-control'
                 )
@@ -125,7 +126,7 @@ class ProfileController extends Controller
         )
             ->add('photo', FileType::class,
                 array(
-                    'label' => 'Photo Profil',
+                    'label' => 'Modifier ma photo de profil',
                     'attr' => array(
                         'class' => 'form-control input-b2'
                     )
