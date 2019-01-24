@@ -48,13 +48,12 @@ class InventaireController extends AbstractController
             $user = $this->getUser();
             $formData = $form->getData();
             /* PHOTO */
-dump($formData);
 
             $file = $formData->getPhoto();
 
-            dump($file);
+
             $someNewFilename = 'p_' . $formData->getId() . '_' . $file->getClientOriginalName();
-            dump($someNewFilename);
+
             $directory = $this->getParameter('path_photo_objet');
             $file->move($directory, $someNewFilename);
             $formData->setNamePhoto($someNewFilename);
@@ -85,6 +84,8 @@ dump($formData);
         $user = $this->getUser();
 
         $userObjet = $this->getDoctrine()->getRepository(Objet::class)->findBy(array('user'=>  $user->getId()));
+
+        dump($userObjet);
 
         return $this->render('inventaire/showObject.html.twig', array(
             'userObjet' => $userObjet,
@@ -142,8 +143,9 @@ dump($formData);
     public function deleteAction(Objet $objet){
         //@TODO securiser le delete
         $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->remove($objet);
-        $entityManager->flush();
+        $objet->removeAt();
+        //$entityManager->remove($objet);
+        $entityManager->flush($objet);
 
     }
 

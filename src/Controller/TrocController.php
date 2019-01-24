@@ -44,6 +44,8 @@ class TrocController extends AbstractController
 
     $demandeByUser = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userAcheteur'=> $user));
 
+
+
         return $this->render('echange/echangeByUser.html.twig', array(
             'demandeByUser' => $demandeByUser
 
@@ -59,10 +61,10 @@ class TrocController extends AbstractController
 
         $user =  $this->getUser();
 
-        $demandeByVendeur = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userVendeur'=> $user));
+        $demandeByVendeur = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userVendeur'=> $user, 'statue' => 1));
 
 
-        dump($demandeByVendeur);
+
         return $this->render('echange/echangeByVendeur.html.twig', array(
             'demandeByVendeur' => $demandeByVendeur
 
@@ -85,6 +87,7 @@ class TrocController extends AbstractController
         $em->merge($echange);
         $em->flush();
 
+        $mailService->notificationMail(true, $echange);
 
         $mailService->notificationMail(true, $echange);
 
