@@ -143,13 +143,7 @@ class ProfileController extends Controller
 
     /**
      * @Route("/amis/{user}", name="profile_amis_detail")
-     */
-    public function showAmisAction(User $user)
-    {
-
- /**
-     * @Route("/amis/{user}", name="profile_amis_detail")
-     */
+    */
     public function showAmisAction(User $user)
     {
 
