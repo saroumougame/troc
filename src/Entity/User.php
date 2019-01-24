@@ -30,6 +30,7 @@ class User extends BaseUser
         parent::__construct();
         $this->objet = new ArrayCollection();
         $this->amis = new ArrayCollection();
+        $this->msgs = new ArrayCollection();
     }
 
 
@@ -58,6 +59,11 @@ class User extends BaseUser
      * @ORM\OneToMany(targetEntity="App\Entity\Amis", mappedBy="user")
      */
     private $amis;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Msg", mappedBy="id_sender")
+     */
+    private $msgs;
 
     
 
@@ -129,6 +135,37 @@ class User extends BaseUser
             // set the owning side to null (unless already changed)
             if ($ami->getUser() === $this) {
                 $ami->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Msg[]
+     */
+    public function getMsgs(): Collection
+    {
+        return $this->msgs;
+    }
+
+    public function addMsg(Msg $msg): self
+    {
+        if (!$this->msgs->contains($msg)) {
+            $this->msgs[] = $msg;
+            $msg->setIdSender($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMsg(Msg $msg): self
+    {
+        if ($this->msgs->contains($msg)) {
+            $this->msgs->removeElement($msg);
+            // set the owning side to null (unless already changed)
+            if ($msg->getIdSender() === $this) {
+                $msg->setIdSender(null);
             }
         }
 

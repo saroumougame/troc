@@ -11,6 +11,12 @@ services:
         command: ["composer", "update"]
 # <------ composer <------
 
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+        - 8080:8080
+
 # ------> mariadb ------>
     mariadb_1sv25msjmqdfh5i:
         container_name: mariadb_1sv25msjmqdfh5i

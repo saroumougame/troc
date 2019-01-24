@@ -43,3 +43,10 @@ services:
             - ./symfony/conf/php7/php.ini:/etc/php7/php.ini
 # <------ symfony <------
 
+
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+        - 8080:8080
+        
