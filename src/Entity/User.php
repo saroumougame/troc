@@ -3,6 +3,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\Collection;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
@@ -15,7 +16,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class User extends BaseUser
 {
-    //@Todo faire les assert
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -23,11 +24,12 @@ class User extends BaseUser
      */
     protected $id;
 
+
     public function __construct()
     {
         parent::__construct();
         $this->objet = new ArrayCollection();
-// your own logic
+        $this->amis = new ArrayCollection();
     }
 
 
@@ -51,6 +53,13 @@ class User extends BaseUser
      * @ORM\OneToMany(targetEntity="App\Entity\Objet", mappedBy="user")
      */
     private $objet;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Amis", mappedBy="user")
+     */
+    private $amis;
+
+    
 
 
 
@@ -95,14 +104,44 @@ class User extends BaseUser
         $this->id = $id;
     }
 
+    /**
+     * @return Collection|Amis[]
+     */
+    public function getAmis(): Collection
+    {
+        return $this->amis;
+    }
 
-//    /**
-//     * @return Collection|Product[]
-//     */
-//    public function getObjet(): Collection
-//    {
-//        return $this->objet;
-//    }
+    public function addAmi(Amis $ami): self
+    {
+        if (!$this->amis->contains($ami)) {
+            $this->amis[] = $ami;
+            $ami->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAmi(Amis $ami): self
+    {
+        if ($this->amis->contains($ami)) {
+            $this->amis->removeElement($ami);
+            // set the owning side to null (unless already changed)
+            if ($ami->getUser() === $this) {
+                $ami->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+
+
+
+
+
+
+
 
 
 }
