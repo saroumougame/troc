@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
-    <title>admin Troc</title>
+    <title>Troc-Troc</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
 
     {% block stylesheets %}
@@ -27,7 +27,7 @@
 <div class="page-loader-wrapper">
     <div class="loader">
         <div class="m-t-30"><img class="zmdi-hc-spin" src="{{ asset('assets/Oreo/images/logo.svg') }}" width="48" height="48" alt="Oreo"></div>
-        <p>chargement...</p>
+        <p>Chargement...</p>
     </div>
 </div>
 <!-- Overlay For Sidebars -->
@@ -36,90 +36,7 @@
 <!-- Top Bar -->
 <nav class="navbar p-l-5 p-r-5">
     <ul class="nav navbar-nav navbar-left">
-        <li>
-            <div class="navbar-header">
-                <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/Oreo/images/logo.svg') }}" width="30" alt="Oreo"><span class="m-l-10">Troc</span></a>
-            </div>
-        </li>
-        <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
-        <li class="hidden-md-down"><a href="events.html" title="Events"><i class="zmdi zmdi-calendar"></i></a></li>
-        <li class="hidden-md-down"><a href="mail-inbox.html" title="Inbox"><i class="zmdi zmdi-email"></i></a></li>
-        <li><a href="contact.html" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li>
-        <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
-                <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
-            </a>
-            <ul class="dropdown-menu pullDown">
-                <li class="body">
-                    <ul class="menu list-unstyled">
-                        {#<li>#}
-                            {#<a href="javascript:void(0);">#}
-                                {#<div class="media">#}
-                                    {#<img class="media-object" src="{{ asset('assets/Oreo/images/xs/avatar2.jpg') }}" alt="">#}
-                                    {#<div class="media-body">#}
-                                        {#<span class="name">Sophia <span class="time">30min ago</span></span>#}
-                                        {#<span class="message">There are many variations of passages</span>#}
-                                    {#</div>#}
-                                {#</div>#}
-                            {#</a>#}
-                        {#</li>#}
-                        {#<li>#}
-                            {#<a href="javascript:void(0);">#}
-                                {#<div class="media">#}
-                                    {#<img class="media-object" src="{{ asset('assets/Oreo/images/xs/avatar3.jpg') }}" alt="">#}
-                                    {#<div class="media-body">#}
-                                        {#<span class="name">Sophia <span class="time">31min ago</span></span>#}
-                                        {#<span class="message">There are many variations of passages of Lorem Ipsum</span>#}
-                                    {#</div>#}
-                                {#</div>#}
-                            {#</a>#}
-                        {#</li>#}
-                        {#<li>#}
-                            {#<a href="javascript:void(0);">#}
-                                {#<div class="media">#}
-                                    {#<img class="media-object" src="{{ asset('assets/Oreo/images/xs/avatar4.jpg') }}" alt="">#}
-                                    {#<div class="media-body">#}
-                                        {#<span class="name">Isabella <span class="time">35min ago</span></span>#}
-                                        {#<span class="message">There are many variations of passages</span>#}
-                                    {#</div>#}
-                                {#</div>#}
-                            {#</a>#}
-                        {#</li>#}
-                        {#<li>#}
-                            {#<a href="javascript:void(0);">#}
-                                {#<div class="media">#}
-                                    {#<img class="media-object" src="{{ asset('assets/Oreo/images/xs/avatar5.jpg') }}" alt="">#}
-                                    {#<div class="media-body">#}
-                                        {#<span class="name">Alexander <span class="time">35min ago</span></span>#}
-                                        {#<span class="message">Contrary to popular belief, Lorem Ipsum random</span>#}
-                                    {#</div>#}
-                                {#</div>#}
-                            {#</a>#}
-                        {#</li>#}
-                        {#<li>#}
-                            {#<a href="javascript:void(0);">#}
-                                {#<div class="media">#}
-                                    {#<img class="media-object" src="{{ asset('assets/Oreo/images/xs/avatar6.jpg') }}" alt="">#}
-                                    {#<div class="media-body">#}
-                                        {#<span class="name">Grayson <span class="time">1hr ago</span></span>#}
-                                        {#<span class="message">There are many variations of passages</span>#}
-                                    {#</div>#}
-                                {#</div>#}
-                            {#</a>#}
-                        {#</li>#}
-                    </ul>
-                </li>
-                <li class="footer"> <a href="javascript:void(0);">View All</a> </li>
-            </ul>
-        </li>
-        <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
-                <div class="notify">
-                    <span class="heartbit"></span>
-                    <span class="point"></span>
-                </div>
-            </a>
 
-        </li>
         <li class="hidden-sm-down">
 
             {{ render(controller(
@@ -128,7 +45,6 @@
 
         </li>
         <li class="float-right">
-            <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
             <a href="{{ path('fos_user_security_logout') }}" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
             {#<a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a>#}
         </li>
@@ -137,16 +53,12 @@
 
 <!-- Left Sidebar -->
 <aside id="leftsidebar" class="sidebar">
-    <ul class="nav nav-tabs">
-        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#dashboard"><i class="zmdi zmdi-home m-r-5"></i>Menu</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user"><i class="zmdi zmdi-account m-r-5"></i>User</a></li>
-    </ul>
-    <div class="tab-content">
+    <div class="tab-content" >
         <div class="tab-pane stretchRight active" id="dashboard">
             <div class="menu">
                 <ul class="list">
                     <li>
-                        <div class="user-info">
+                        <div class="user-info" style="margin-top:20px">
                             {% if app.user.namePhoto is not null %}
                                 <div class="image"> <img src="{{ asset('assets/files/')~ app.user.namePhoto  }}" alt="User"></div>
                             {% else %}
@@ -166,79 +78,6 @@
                         {% include 'nav.html.twig' %}
 
                     {% endblock %}
-                </ul>
-            </div>
-        </div>
-        <div class="tab-pane stretchLeft" id="user">
-            <div class="menu">
-                <ul class="list">
-                    <li>
-                        <div class="user-info m-b-20 p-b-15">
-                            {% if app.user.namePhoto is not null %}
-                                <div class="image"> <img src="{{ asset('assets/files/')~ app.user.namePhoto  }}" alt="User"></div>
-                            {% else %}
-                                <div class="profile-image"> <img src="{{ asset('assets/Oreo/images/profile_av.jpg') }}" alt=""> </div>
-                            {% endif %}
-                            <div class="detail">
-                                <h4>{{ app.user.username }}</h4>
-
-                            </div>
-                            {#<a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a>#}
-                            {#<a title="twitter" href="#"><i class="zmdi zmdi-twitter"></i></a>#}
-                            {#<a title="instagram" href="#"><i class="zmdi zmdi-instagram"></i></a>#}
-                            {#<p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>#}
-                            <div class="row">
-                                <div class="col-4">
-                                    <h5 class="m-b-5">852</h5>
-                                    <small>Echange</small>
-                                </div>
-                                <div class="col-4">
-                                    <h5 class="m-b-5">13k</h5>
-                                    <small>Demande</small>
-                                </div>
-                                <div class="col-4">
-                                    <h5 class="m-b-5">234</h5>
-                                    <small>Proposition</small>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-
-                        STAT
-                        {#<small class="text-muted">Email address: </small>#}
-                        {#<p>michael@gmail.com</p>#}
-                        {#<hr>#}
-                        {#<small class="text-muted">Phone: </small>#}
-                        {#<p>+ 202-555-0191</p>#}
-                        <hr>
-                        {#<ul class="list-unstyled">#}
-                            {#<li>#}
-                                {#<div>Photoshop</div>#}
-                                {#<div class="progress m-b-20">#}
-                                    {#<div class="progress-bar l-blue " role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 89%"> <span class="sr-only">62% Complete</span> </div>#}
-                                {#</div>#}
-                            {#</li>#}
-                            {#<li>#}
-                                {#<div>Wordpress</div>#}
-                                {#<div class="progress m-b-20">#}
-                                    {#<div class="progress-bar l-green " role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100" style="width: 56%"> <span class="sr-only">87% Complete</span> </div>#}
-                                {#</div>#}
-                            {#</li>#}
-                            {#<li>#}
-                                {#<div>HTML 5</div>#}
-                                {#<div class="progress m-b-20">#}
-                                    {#<div class="progress-bar l-amber" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%"> <span class="sr-only">32% Complete</span> </div>#}
-                                {#</div>#}
-                            {#</li>#}
-                            {#<li>#}
-                                {#<div>Angular</div>#}
-                                {#<div class="progress m-b-20">#}
-                                    {#<div class="progress-bar l-blush" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100" style="width: 43%"> <span class="sr-only">56% Complete</span> </div>#}
-                                {#</div>#}
-                            {#</li>#}
-                        {#</ul>#}
-                    </li>
                 </ul>
             </div>
         </div>
