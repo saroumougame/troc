@@ -6,13 +6,13 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2> Recherche objets
+                    <h2> Recherche amis
                         {#<small>resultats {{ nbresult }}</small>#}
                     </h2>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
                     <ul class="breadcrumb float-md-right">
-                        <li class="breadcrumb-item"><a href=""><i class="zmdi zmdi-group-work"></i> recherche</a></li>
+                        <li class="breadcrumb-item"><a href=""><i class="zmdi zmdi-group-work"></i> Amis</a></li>
                         <li class="breadcrumb-item active"> search</li>
                     </ul>
                 </div>
@@ -21,14 +21,16 @@
 
 
 
-        {% for objets in objet  %}
+        {% for ami in amis  %}
             <div class="col-lg-12 col-md-12">
                 <div class="card">
                     <div class="header">
-                        <h2><strong> {{ objets.nom }} </strong> <a href="{{ path('objet_detail',{'objet': objets.id}) }}">objet</a></h2>
-                        <ul class="header-dropdown">
-                            <li class="remove">
-                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                        <h2><strong> {{ ami.username }} </strong>
+                            <a href="{{ path('amis_add',{'user': ami.id}) }}">abonner</a>
+                        </h2>
+                        {#<ul class="header-dropdown">#}
+                            {#<li class="remove">#}
+                                {#<a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>#}
                             </li>
                         </ul>
                     </div>
@@ -37,7 +39,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
 
-                                    {{ objets.description | raw }}
+                                    {#{{ objets.description | raw }}#}
 
 
                                 </div>

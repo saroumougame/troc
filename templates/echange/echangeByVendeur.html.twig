@@ -44,7 +44,7 @@
                         <table class="table table-bordered">
                             <thead>
                             <tr>
-                                <th>Mon objet</th>
+                                <th>Objet proposé</th>
                                 <th>Objet demandé</th>
                                 <th>Nom d'utilisateur</th>
                                 <th>Date</th>
@@ -60,7 +60,7 @@
                                     <th scope="row"><a href="{{ path('objet_detail', {'objet': demandeByVendeurs.objectVendeur.id}) }}"> {{ demandeByVendeurs.objectAchteur.nom }}</a>   </th>
                                     <td><a href="{{ path('objet_detail', {'objet': demandeByVendeurs.objectVendeur.id}) }}">{{ demandeByVendeurs.objectVendeur.nom }}</a> </td>
                                     <td>{{ demandeByVendeurs.userVendeur.username }}</td>
-                                    <td>date a mettre gedmo</td>
+                                    <td>{{ demandeByVendeurs.created|date("m/d/Y") }}</td>
                                     <td>  <a href="{{ path('accepter_proposition', {'echange': demandeByVendeurs.id}) }}">Accepter</a> <a href="{{ path('refuser_proposition', {'echange': demandeByVendeurs.id}) }}">Refuser</a> </td>
                                 </tr>
 

@@ -14,6 +14,7 @@ use Doctrine\ORM\QueryBuilder;
 use App\Entity\Msg;
 use App\Entity\User;
 use App\Entity\Objet;
+use App\Entity\User;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -26,6 +27,11 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 
 
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use App\Form\EchangeType;
+use Doctrine\ORM\UserRepository;
+use Doctrine\ORM\EntityRepository;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 /**
  * @Route("/amis")
  */
@@ -40,6 +46,7 @@ class AmisController extends AbstractController
       $user = $this->getUser();
 
       $amis  = $this->getDoctrine()->getRepository(Amis::class)->findBy(array('user'=> $user->getId()));
+
 
         return $this->render('amis/showAmis.html.twig',
             array('amis' => $amis)
@@ -133,6 +140,115 @@ class AmisController extends AbstractController
         return $form->getForm();
     }
 
+
+
+
+
+    public function searchAmis()
+    {
+
+        dump('toto');
+
+        $amis = new User();
+        $form = $this->getFormSearch($amis);
+
+
+        return $this->render(
+            'amis/searchAmis.html.twig',
+            array('searchAmis' => $form->createView())
+        );
+
+
+    }
+
+
+    public function AmisbySearch($searchAmis)
+    {
+
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $param = array('username' => $searchAmis);
+
+        $objet = $entityManager->getRepository(User::class)->getUserBySearch($param);
+
+        return $objet;
+
+
+    }
+
+//______
+
+    public function getFormSearch($objet){
+
+
+
+        $form = $this->createFormBuilder($objet, array(
+            'action' => $this->generateUrl('amis_search'),
+            'method' => 'POST',
+        ));
+        $form->add("username", TextType::class,
+            array(
+                'attr' => array(
+                    'class' => ''
+                )
+            )
+        )
+            ->add('submit', SubmitType::class,
+                array(
+                    'label' => 'Valider',
+                    'attr' => array(
+                        'class' => ''))
+            );
+        return $form->getForm();
+    }
+
+
+
+    /**
+     * @Route("/search/", name="amis_search")
+     */
+    public function searchAction(Request $request)
+    {
+        $amis = new User();
+        $form = $this->getFormSearch($amis);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted()) {
+            $info = $form->getData();
+            $newobjet = $this->AmisBySearch($info->getUsername());
+
+            return $this->render('amis/searchShow.html.twig', array(
+                'amis' => $newobjet,
+            ));
+        }
+    }
+
+
+    /**
+     * @Route("/add/{user}", name="amis_add")
+     */
+    public function setAmis(User $user){
+
+
+
+        $em = $this->getDoctrine()->getManager();
+        $userconnect = $this->getUser();
+        $newAmis = new Amis();
+
+        $newAmis->setUser($userconnect);
+        $newAmis->setAmis($user);
+        $em->persist($newAmis);
+
+        $em->flush();
+
+        return $this->redirectToRoute('amis_show');
+
+
+
+
+
+
+    }
 
 
 

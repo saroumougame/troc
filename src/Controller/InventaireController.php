@@ -80,9 +80,9 @@ class InventaireController extends AbstractController
 
         $user = $this->getUser();
 
-        $userObjet = $this->getDoctrine()->getRepository(Objet::class)->findBy(array('user'=>  $user->getId()));
+        $userObjet = $this->getDoctrine()->getRepository(Objet::class)->findBy(array('user'=>  $user->getId(),'delete' => null));
 
-        dump($userObjet);
+
 
         return $this->render('inventaire/showObject.html.twig', array(
             'userObjet' => $userObjet,
@@ -139,11 +139,13 @@ class InventaireController extends AbstractController
      */
     public function deleteAction(Objet $objet){
         //@TODO securiser le delete
+
         $entityManager = $this->getDoctrine()->getManager();
         $objet->removeAt();
         //$entityManager->remove($objet);
         $entityManager->flush($objet);
 
+       return $this->redirectToRoute('show_object');
     }
 
 

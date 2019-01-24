@@ -54,12 +54,12 @@
 
                                 {% for demandeByUsers in demandeByUser %}
 
-                                    {{ dump(demandeByUsers) }}
+
                                     <tr>
                                         <th scope="row">{{ demandeByUsers.objectAchteur.nom }}</th>
                                         <td>{{ demandeByUsers.objectVendeur.nom }}</td>
                                         <td>{{ demandeByUsers.userVendeur.username }}</td>
-                                        <td>date a mettre gedmo</td>
+                                        <td>{{ demandeByUsers.created|date("m/d/Y") }}</td>
                                         <td>Annuler</td>
                                     </tr>
 

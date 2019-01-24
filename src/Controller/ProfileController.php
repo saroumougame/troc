@@ -36,7 +36,7 @@ class ProfileController extends Controller
      */
     public function showAction()
     {
-      //@TODO commentaire
+
 
         $User = $this->getUser();
         $formUser = $this->getForm($User);

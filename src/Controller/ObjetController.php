@@ -124,11 +124,9 @@ class ObjetController extends AbstractController
 
         $entityManager = $this->getDoctrine()->getManager();
         $param = array('nom' => $searchObjet);
-        dump($param);
+
         $objet = $entityManager->getRepository(Objet::class)->getObjetBySearch($param);
 
-
-        dump($objet);
         return $objet;
 
 
@@ -174,7 +172,7 @@ class ObjetController extends AbstractController
         if ($form->isSubmitted()) {
             $info = $form->getData();
             $newobjet = $this->ObjetBySearch($info->getNom());
-            dump($newobjet);
+
 
             return $this->render('objet/searchShow.html.twig', array(
                 'objet' => $newobjet,

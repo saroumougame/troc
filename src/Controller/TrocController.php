@@ -79,17 +79,21 @@ class TrocController extends AbstractController
      *
      */
     public function accepterEchangeAction(Echange $echange, MailService $mailService){
-        dump($echange);
+
+
+        $objAcheter =$echange->getObjectAchteur();
+
+        $objVendeur = $echange->getObjectVendeur();
 
         $echange->setStatue(2);
         $em = $this->getDoctrine()->getManager();
-
+        $objVendeur->removeAt();
+        $objAcheter->removeAt();
         $em->merge($echange);
         $em->flush();
 
         $mailService->notificationMail(true, $echange);
 
-        $mailService->notificationMail(true, $echange);
 
 
        return $this->redirectToRoute('troc_proposition');
@@ -102,6 +106,7 @@ class TrocController extends AbstractController
      *
      */
     public function refuserEchangeAction(Echange $echange, MailService $mailService){
+
 
         $em = $this->getDoctrine()->getManager();
 

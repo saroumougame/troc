@@ -46,6 +46,7 @@
                                     <img src="{{ asset('assets/files/photo/objet/')~ userObjets.namePhoto  }}" alt="Product" class="img-fluid" />
                                     <div class="hover">
                                         <a href="{{  path('objet_detail',{'objet': userObjets.id}) }}" class="btn btn-primary waves-effect"><i class="zmdi zmdi-plus"></i></a>
+                                        <a href="{{  path('edit_object',{'objet': userObjets.id}) }}" class="btn btn-primary waves-effect"><i class="zmdi zmdi-edit"></i></a>
                                         <a href="{{  path('delete_object',{'objet': userObjets.id}) }}" class="btn btn-primary waves-effect"><i class="zmdi zmdi-delete"></i></a>
                                     </div>
                                 </div>

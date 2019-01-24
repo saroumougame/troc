@@ -8,15 +8,15 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2> Ajouter Objet
-                        <small>Ajouter des objet dans votre inventaire</small>
+                    <h2> Edit Objet
+                        <small>edit des objet dans votre inventaire</small>
                     </h2>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
                     <ul class="breadcrumb float-md-right">
                         <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Oreo</a></li>
                         <li class="breadcrumb-item"><a href="javascript:void(0);">UI</a></li>
-                        <li class="breadcrumb-item active">Ajouter objet</li>
+                        <li class="breadcrumb-item active">Edit objet</li>
                     </ul>
                 </div>
             </div>
@@ -70,6 +70,18 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="row clearfix">
+                                    <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                        <label >Photo de l'objet</label>
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-8">
+                                        <div class="form-group">
+                                            {{ form_row(form.photo) }}
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="row clearfix">
                                     <div class="col-sm-8 offset-sm-2">
                                         {{ form_row(form.submit, { 'attr': {'class': 'btn btn-raised btn-primary btn-round waves-effect'} }) }}

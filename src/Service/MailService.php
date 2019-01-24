@@ -13,6 +13,9 @@ namespace App\Service;
 
 
 
+use App\Entity\Echange;
+use App\Entity\User;
+
 class MailService
 {
 
@@ -30,13 +33,13 @@ class MailService
 
         if ($statue === false){
 
-            $msg = 'Bonjour, '.$echange->getUserVendeur()->getUsername().' a refuser votre proposition d\'echanger le objet';
+            $msg = 'Bonjour, '.$echange->getUserVendeur()->getUsername().' a refuser votre proposition d\'echanger
+            '. $echange->getObjectVendeur()->getNom().'.';
 
         }else{
 
-
-            $msg = 'Bonjour, '.$echange->getUserVendeur()->getUsername().' a accepter votre proposition d\'echanger le objet';
-
+            $msg = 'Bonjour, '.$echange->getUserVendeur()->getUsername().' a accepter votre proposition d\'echanger
+            '. $echange->getObjectVendeur()->getNom().'.';
         }
 
 
@@ -54,11 +57,20 @@ class MailService
 
         $msg = $this->GetMessageEchange($statue, $echange);
 
+
+
+
+        $mail = $echange->getUserAcheteur()->getEmail();
+
+        $mailTo = $echange->getUserVendeur()->getEmail();
+
+
+
         $message = (new \Swift_Message('Troc notification'))
             ->setFrom('troc@troc.com')
-            ->setTo('sridar.aroumougame@gmail.com')
+            ->setTo($mail)
             ->addPart(
-                $msg
+                $msg.$mailTo
             );
 
 

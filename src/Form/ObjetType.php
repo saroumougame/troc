@@ -24,7 +24,8 @@ class ObjetType extends AbstractType {
         $builder
             ->add('nom', TextType::class, array('label' => false))
             ->add('description', TextareaType::class,array('label' => false))
-            ->add('photo', FileType::class,array('label' => false))
+            ->add('photo', FileType::class,array('label' => false,
+                'required' => false))
             ->add('submit', SubmitType::class, array('label' => "Ajouter l'objet")
 
             );
