@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/plugins/bootstrap/css/bootstrap.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/plugins/morrisjs/morris.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/css/main.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/css/color_skins.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/Oreo/css/ecommerce.css') }}"/>
+    {% endblock %}
+
+
+{% block content %}
+
+
+    <section class="content ecommerce-page">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Mes messages</h2>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <ul class="breadcrumb float-md-right">
+                        <li class="breadcrumb-item"><a href="{{ path('home') }}"><i class="zmdi zmdi-home"></i>Accueil</a></li>
+                        <li class="breadcrumb-item active">Mes messages</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container-fluid">
+            <div class="row clearfix">
+                
+                <div style="overflow-y: scroll; height:500px;width:100%">
+
+                    {% for message in messages %}
+                        
+                        {% if me == message.idSender.id %}
+
+                            <div style="text-align:right">
+                                {{ message.message }}
+                                <br />
+                                <small>Envoyé par {{ message.idSender.username }}</small>
+                            </div>
+
+                        {% else %}
+
+                            <div style="text-align:left">
+                                {{ message.message }}
+                                <br />
+                                <small>Envoyé par {{ message.idSender.username }}</small>
+                            </div>
+
+                        {% endif %} 
+                        
+
+                    {% endfor %}
+                
+                </div>
+
+                 {{ form_start(formDemandeTroc) }}
+
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            {{ form_row(formDemandeTroc.message) }}
+                        </div>
+                    </div>
+                    <div class="col-sm-12 right">
+                        {{ form_row(formDemandeTroc.submit) }}
+                    </div>
+
+                {{ form_end(formDemandeTroc) }}
+
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+{% endblock %}

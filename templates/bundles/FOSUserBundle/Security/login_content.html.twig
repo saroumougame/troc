@@ -13,7 +13,7 @@
         <div class="logo-container">
             <img src="{{ asset('assets/Oreo/images/logo.svg') }}" alt="">
         </div>
-        <h5>Log in</h5>
+        <h5>Connexion</h5>
         {% if app.user %}
             <strong>{{ app.user.username }}</strong><br>
                 Vous voulez changer de compte?
@@ -28,26 +28,26 @@
 
         <div class="input-group input-lg">
             {#<label for="username">{{ 'security.login.username'|trans }}</label>#}
-            <input type="text" class="form-control" placeholder="Username" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" >
+            <input type="text" class="form-control" placeholder="Nom d'utilisateur" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" >
             <span class="input-group-addon">
-                                <i class="zmdi zmdi-account-circle"></i>
-                            </span>
+                <i class="zmdi zmdi-account-circle"></i>
+            </span>
         </div>
 
         <div class="input-group input-lg">
 
             {#<label for="password">{{ 'security.login.password'|trans }}</label>#}
 
-            <input type="password" id="password" class="form-control" name="_password" required="required" autocomplete="current-password" />
+            <input type="password" id="password" class="form-control" placeholder="Mot de passe" name="_password" required="required" autocomplete="current-password" />
 
             <span class="input-group-addon">
-                                <i class="zmdi zmdi-lock"></i>
-                            </span>
+                <i class="zmdi zmdi-lock"></i>
+            </span>
         </div>
 
         <div class="checkbox">
             <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-            <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+            <label for="remember_me">Se rappeller de moi</label>
 
         </div>
 
@@ -56,8 +56,12 @@
     <div class="footer text-center">
 
 
-        <input type="submit" name="_submit"  id="_submit" class="btn btn-primary btn-round btn-lg btn-block " value="{{ 'security.login.submit'|trans }}" />
+        <input type="submit" name="_submit"  id="_submit" class="btn btn-primary btn-round btn-lg btn-block " value="Se connecter" />
         {#<h5><a href="forgot-password.html" class="link">Forgot Password?</a></h5>#}
+    </div>
+
+    <div>
+    <span>Vous avez perdu votre mot de passe ? Vous pouvez le récupérer </span><a href="{{ path('fos_user_resetting_request') }}">ici</a>
     </div>
 
 

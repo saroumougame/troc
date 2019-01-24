@@ -9,13 +9,13 @@
         <div class="logo-container">
             <img src="{{ asset('assets/Oreo/images/logo.svg') }}" alt="">
         </div>
-        <h5>Inscription</h5>
+        <h5>Inscription à Troc-Troc</h5>
     </div>
     <div class="content">
 
         <div class="input-group input-lg">
 
-            {{ form_widget(form.username, {'label': false,'attr': {'class': 'form-control', 'type': 'text' ,'placehorlder' :'username'}}) }}
+            {{ form_widget(form.username, {'label': false,'attr': {'class': 'form-control', 'type': 'text' ,'placeholder' : "Nom d'utilisateur"}}) }}
             <span class="input-group-addon">
                                 <i class="zmdi zmdi-account-circle"></i>
                             </span>
@@ -23,7 +23,7 @@
 
         <div class="input-group input-lg">
 
-            {{ form_widget(form.email, {'label': false,'attr': {'class': 'form-control', 'type': 'text','placehorlder' :'email'}}) }}
+            {{ form_widget(form.email, {'label': false,'attr': {'class': 'form-control', 'type': 'text','placeholder' :'E-mail'}}) }}
             <span class="input-group-addon">
                                 <i class="zmdi zmdi-email"></i>
                             </span>
@@ -33,14 +33,14 @@
 
         <div class="input-group input-lg">
 
-            {{ form_widget(form.plainPassword.first, {'label': false,'attr': {'class': 'form-control', 'type': 'text','placehorlder' :'password'}}) }}
+            {{ form_widget(form.plainPassword.first, {'label': false,'attr': {'class': 'form-control', 'type': 'text','placeholder' :'Mot de passe'}}) }}
             <span class="input-group-addon">
                                 <i class="zmdi zmdi-lock"></i>
                             </span>
         </div>
         <div class="input-group input-lg">
 
-            {{ form_widget(form.plainPassword.second, {'label': false,'attr': {'class': 'form-control', 'type': 'text', 'placeholder' : 'confirm password'}}) }}
+            {{ form_widget(form.plainPassword.second, {'label': false,'attr': {'class': 'form-control', 'type': 'text', 'placeholder' : 'Confirmation du mot de passe'}}) }}
             <span class="input-group-addon">
                                 <i class="zmdi zmdi-lock"></i>
                             </span>
@@ -53,7 +53,7 @@
 
     </div>
     <div class="footer text-center">
-        <input type="submit" class="btn btn-primary btn-round btn-lg btn-block " value="{{ 'registration.submit'|trans }}" />
+        <input type="submit" class="btn btn-primary btn-round btn-lg btn-block " value="S'enregistrer" />
 
 
     </div>
