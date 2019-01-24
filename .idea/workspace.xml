@@ -4,13 +4,189 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
     <option name="SCOPE_TYPE" value="3" />
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/Entity/Objet.php" line="66" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ab976b62-9ded-491d-a3ab-3bc2ea089126" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/echange/echangeByUser.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/echange/echangeByVendeur.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/entry.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/package.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/src/App.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/src/App.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/src/Component/AppComponent/AppComponent.jsx" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/src/Component/AppComponent/AppComponent.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/src/Component/AppComponent/AppComponentEvent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/src/Container/AppContainer/AppContainer.jsx" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/src/Container/AppContainer/AppContainer.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/src/Font/Quicksand/Quicksand-Bold.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/src/Font/Quicksand/Quicksand-Light.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/src/Font/Quicksand/Quicksand-Medium.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/src/Font/Quicksand/Quicksand-Regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/src/Font/Quicksand/Quicksand.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/webpack/webpack.config.dev.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/webpack/webpack.config.dev.js.dist" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/webpack/webpack.config.prod.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/webpack/webpack.config.prod.js.dist" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/yarn.lock" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/files/p_3." />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/files/photo/objet/p_3." />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/files/photo/objet/p_3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/files/photo/objet/p__1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/files/photo/objet/p__7.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/files/photo/objet/p__Logo-One-Piece.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/files/photo/objet/p__avatar92.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/files/photo/objet/p__avatar92_002.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/files/photo/objet/p__avatar92_004.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/files/photo/profile/p_3." />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/dist/App.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/dist/App.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/aria_log.00000001" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/aria_log_control" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/classe.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/classe.ibd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/correction.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/correction.ibd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/db.opt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/exercice.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/exercice.ibd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/exercice_groupe.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/exercice_groupe.ibd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/fos_user.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/fos_user.ibd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/notation.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/notation.ibd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/promotion.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/promotion.ibd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/reponse.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/reponse.ibd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/school.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/coding/school.ibd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/ib_buffer_pool" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/ib_logfile0" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/ib_logfile1" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/ibdata1" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/ibtmp1" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/multi-master.info" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/column_stats.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/column_stats.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/column_stats.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/columns_priv.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/columns_priv.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/columns_priv.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/db.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/db.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/db.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/event.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/event.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/event.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/func.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/func.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/func.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/general_log.CSM" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/general_log.CSV" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/general_log.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/gtid_slave_pos.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/gtid_slave_pos.ibd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/help_category.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/help_category.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/help_category.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/help_keyword.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/help_keyword.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/help_keyword.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/help_relation.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/help_relation.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/help_relation.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/help_topic.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/help_topic.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/help_topic.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/host.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/host.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/host.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/index_stats.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/index_stats.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/index_stats.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/innodb_index_stats.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/innodb_index_stats.ibd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/innodb_table_stats.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/innodb_table_stats.ibd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/plugin.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/plugin.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/plugin.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/proc.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/proc.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/proc.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/procs_priv.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/procs_priv.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/procs_priv.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/proxies_priv.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/proxies_priv.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/proxies_priv.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/roles_mapping.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/roles_mapping.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/roles_mapping.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/servers.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/servers.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/servers.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/slow_log.CSM" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/slow_log.CSV" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/slow_log.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/table_stats.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/table_stats.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/table_stats.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/tables_priv.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/tables_priv.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/tables_priv.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone_leap_second.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone_leap_second.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone_leap_second.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone_name.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone_name.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone_name.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone_transition.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone_transition.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone_transition.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone_transition_type.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone_transition_type.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/time_zone_transition_type.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/transaction_registry.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/transaction_registry.ibd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/user.MYD" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/user.MYI" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/mysql/user.frm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/performance_schema/db.opt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/skyflow/database/mariadb/tc.log" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Amis.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20181204150737.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20181204151512.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20190107152111.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20190107152413.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20190107152753.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20190118140639.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Repository/AmisRepository.php" />
+      <change beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d14980d9-a533-44ad-9e5b-e10cffb4e739.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/d14980d9-a533-44ad-9e5b-e10cffb4e739.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/sridar.iml" afterPath="$PROJECT_DIR$/.idea/sridar.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/config/packages/assets.yaml" afterPath="$PROJECT_DIR$/config/packages/assets.yaml" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AmisController.php" afterPath="$PROJECT_DIR$/src/Controller/AmisController.php" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/InventaireController.php" afterPath="$PROJECT_DIR$/src/Controller/InventaireController.php" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProfileController.php" afterPath="$PROJECT_DIR$/src/Controller/ProfileController.php" />
       <change beforePath="$PROJECT_DIR$/src/Controller/TrocController.php" afterPath="$PROJECT_DIR$/src/Controller/TrocController.php" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Objet.php" afterPath="$PROJECT_DIR$/src/Entity/Objet.php" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" afterPath="$PROJECT_DIR$/src/Entity/User.php" />
+      <change beforePath="$PROJECT_DIR$/templates/Landing/index.html.twig" afterPath="$PROJECT_DIR$/templates/Landing/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/amis/showAmis.html.twig" afterPath="$PROJECT_DIR$/templates/amis/showAmis.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/baseAuth.html.twig" afterPath="$PROJECT_DIR$/templates/baseAuth.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Registration/register.html.twig" afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Registration/register.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Security/login.html.twig" afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Security/login.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/inventaire/showObject.html.twig" afterPath="$PROJECT_DIR$/templates/inventaire/showObject.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/nav.html.twig" afterPath="$PROJECT_DIR$/templates/nav.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/profile/detail.html.twig" afterPath="$PROJECT_DIR$/templates/profile/detail.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,64 +223,30 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="sridar: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MariaDB - sridar@0.0.0.0" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sridar: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="amis: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MariaDB - sridar@0.0.0.0" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sridar: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="objet: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="indexController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/indexController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/ProfileController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="echange" pinned="false" current-in-tab="false">
-        <entry file="das://table:/b28c6d80/d14980d9-a533-44ad-9e5b-e10cffb4e739/sridar.echange">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fos_user" pinned="false" current-in-tab="false">
-        <entry file="das://table:/b28c6d80/d14980d9-a533-44ad-9e5b-e10cffb4e739/sridar.fos_user">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Echange.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Echange.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TrocController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/TrocController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="62" column="29" lean-forward="false" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="29" />
+            <state relative-caret-position="375">
+              <caret line="30" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding>
                 <element signature="e#119#142#0#PHP" expanded="true" />
               </folding>
@@ -112,21 +254,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="echangeByUser.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/echange/echangeByUser.html.twig">
+      <file leaf-file-name="AmisRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Repository/AmisRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="echangeByVendeur.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/echange/echangeByVendeur.html.twig">
+      <file leaf-file-name="InventaireController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/InventaireController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="21" column="68" lean-forward="false" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
+            <state relative-caret-position="198">
+              <caret line="140" column="59" lean-forward="false" selection-start-line="140" selection-start-column="46" selection-end-line="140" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Amis.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Amis.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Objet.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Objet.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="60" column="1" lean-forward="true" selection-start-line="60" selection-start-column="1" selection-end-line="64" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -143,19 +305,49 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>body</find>
-      <find>nav</find>
-      <find>path('index')</find>
-      <find>mick</find>
-      <find>include</find>
-      <find>/show</find>
-      <find>EchangeType</find>
-      <find>demande</find>
+      <find>sign-in</find>
+      <find>vos</find>
+      <find>image</find>
+      <find>profile_av</find>
+      <find>entitymana</find>
+      <find>statue</find>
+      <find>objet_detail</find>
+      <find>ecommerce</find>
+      <find>entreprise_search</find>
+      <find>&lt;li class=&quot;hidden-sm-down&quot;&gt;</find>
+      <find>eugenmayer</find>
+      <find>app-</find>
+      <find>/sridar</find>
+      <find>lol</find>
+      <find>app-vendor</find>
+      <find>troc_proposition</find>
+      <find>demandeByVendeurs</find>
+      <find>sta</find>
+      <find>qui</find>
+      <find>after</find>
+      <find>crea</find>
+      <find>aftertech@gmail.com</find>
+      <find>object/show</find>
+      <find>accepter</find>
+      <find>api_platform</find>
+      <find>sridar</find>
+      <find>asset</find>
+      <find>MailSer</find>
+      <find>param</find>
+      <find>move</find>
     </findStrings>
+    <replaceStrings>
+      <replace>histTrocPropos</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/templates/bundles</dir>
+      <dir>$PROJECT_DIR$/docker</dir>
+      <dir>$PROJECT_DIR$/src</dir>
+      <dir>$PROJECT_DIR$/templates/bundles/FOSUserBundle</dir>
       <dir>$PROJECT_DIR$/templates</dir>
+      <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/src/Controller</dir>
+      <dir>$PROJECT_DIR$/config</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -164,46 +356,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docker-compose.yml" />
-        <option value="$PROJECT_DIR$/dockerfile.yml" />
-        <option value="$PROJECT_DIR$/docker/docker-compose.yml" />
-        <option value="$PROJECT_DIR$/templates/nav.html.twig" />
-        <option value="$PROJECT_DIR$/config/packages/security.yaml" />
+        <option value="$PROJECT_DIR$/templates/inventaire/addObject.html.twig" />
         <option value="$PROJECT_DIR$/config/packages/fos_user.yaml" />
-        <option value="$PROJECT_DIR$/config/packages/framework.yaml" />
-        <option value="$PROJECT_DIR$/config/routes/fos-user.yml" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/templates/Landing/landing.html.twig" />
-        <option value="$PROJECT_DIR$/templates/Landing/index.html.twig" />
-        <option value="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" />
-        <option value="$PROJECT_DIR$/templates/Profile/addObjet.html.twig" />
-        <option value="$PROJECT_DIR$/src/Form/ObjetType.php" />
-        <option value="$PROJECT_DIR$/templates/Profile/addObject.html.twig" />
-        <option value="$PROJECT_DIR$/templates/Profile/showObject.html.twig" />
-        <option value="$PROJECT_DIR$/templates/Profile/detail.html.twig.html" />
-        <option value="$PROJECT_DIR$/templates/Profile/detailObjet.html.twig" />
-        <option value="$PROJECT_DIR$/templates/profile/detailObject.html.twig" />
-        <option value="$PROJECT_DIR$/templates/profile/editObject.html.twig" />
-        <option value="$PROJECT_DIR$/templates/profile/showObject.html.twig" />
-        <option value="$PROJECT_DIR$/templates/Produit/produit.html.twig" />
         <option value="$PROJECT_DIR$/templates/home/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Entity/User.php" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/Entity/Objet.php" />
         <option value="$PROJECT_DIR$/templates/objet/detailObjet.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/ProduitController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/LandingController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/EchangeController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/indexController.php" />
-        <option value="$PROJECT_DIR$/src/Form/TrocDemandeForm.php" />
-        <option value="$PROJECT_DIR$/src/Form/EchangeType.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Echange.php" />
+        <option value="$PROJECT_DIR$/config/packages/doctrine.yaml" />
+        <option value="$PROJECT_DIR$/assets/css/app.scss" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/assets/css/box.scss" />
+        <option value="$PROJECT_DIR$/assets/js/toto.js" />
+        <option value="$PROJECT_DIR$/assets/css/main.scss" />
+        <option value="$PROJECT_DIR$/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/templates/objet/searchObjet.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/ObjetController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/ProfileController.php" />
-        <option value="$PROJECT_DIR$/templates/echange/echangeByUser.html.twig.html" />
-        <option value="$PROJECT_DIR$/src/Controller/TrocController.php" />
+        <option value="$PROJECT_DIR$/templates/objet/searchShow.html.twig" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/docker/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/makefile" />
+        <option value="$PROJECT_DIR$/docker/symfony/conf/apache2/httpd.conf" />
+        <option value="$PROJECT_DIR$/docker-sync.yml" />
+        <option value="$PROJECT_DIR$/docker/docker-compose-dev.yml" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/bin/console" />
+        <option value="$PROJECT_DIR$/src/Repository/ObjetRepository.php" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/src/Controller/indexController.php" />
         <option value="$PROJECT_DIR$/templates/echange/echangeByVendeur.html.twig" />
-        <option value="$PROJECT_DIR$/templates/echange/echangeByUser.html.twig" />
+        <option value="$PROJECT_DIR$/templates/profile/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Amie.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d14980d9-a533-44ad-9e5b-e10cffb4e739/console_1.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d14980d9-a533-44ad-9e5b-e10cffb4e739/console_2.sql" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/templates/Landing/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Security/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/Service/MailSerivice.php" />
+        <option value="$PROJECT_DIR$/src/Controller/AmieController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/User.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d14980d9-a533-44ad-9e5b-e10cffb4e739/console.sql" />
+        <option value="$PROJECT_DIR$/src/Controller/AmisController.php" />
+        <option value="$PROJECT_DIR$/templates/nav.html.twig" />
+        <option value="$PROJECT_DIR$/templates/profile/detail.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/ProfileController.php" />
+        <option value="$PROJECT_DIR$/templates/amis/showAmis.html.twig" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/src/Service/MailService.php" />
+        <option value="$PROJECT_DIR$/src/Controller/TrocController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Objet.php" />
+        <option value="$PROJECT_DIR$/src/Controller/InventaireController.php" />
+        <option value="$PROJECT_DIR$/templates/inventaire/showObject.html.twig" />
+        <option value="$PROJECT_DIR$/config/packages/assets.yaml" />
       </list>
     </option>
   </component>
@@ -218,6 +421,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.2">
     <include_path>
@@ -243,30 +449,41 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
       <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/psr/link" />
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
+      <path value="$PROJECT_DIR$/vendor/facebook/webdriver" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
       <path value="$PROJECT_DIR$/vendor/symfony/validator" />
       <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
       <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
       <path value="$PROJECT_DIR$/vendor/symfony/test-pack" />
+      <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
       <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
       <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
       <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
       <path value="$PROJECT_DIR$/vendor/symfony/cache" />
       <path value="$PROJECT_DIR$/vendor/symfony/serializer-pack" />
-      <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
       <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
@@ -298,7 +515,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/symfony/intl" />
       <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
       <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
@@ -311,13 +527,16 @@
       <path value="$PROJECT_DIR$/vendor/symfony/asset" />
       <path value="$PROJECT_DIR$/vendor/symfony/config" />
       <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
-      <path value="$PROJECT_DIR$/vendor/facebook/webdriver" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
       <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
-      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/contracts" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/core" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/api-pack" />
+      <path value="$PROJECT_DIR$/vendor/webonyx/graphql-php" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/cors-bundle" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
@@ -445,53 +664,13 @@
             <path>
               <item name="sridar" type="b2602c69:ProjectViewProjectNode" />
               <item name="sridar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sridar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sridar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sridar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sridar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sridar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sridar" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sridar" type="b2602c69:ProjectViewProjectNode" />
               <item name="sridar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sridar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sridar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="echange" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sridar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sridar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sridar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sridar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="friendsofsymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sridar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sridar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="friendsofsymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="user-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -511,6 +690,11 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/docker" />
+      <recent name="$PROJECT_DIR$/templates/inventaire" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -542,37 +726,89 @@
       <workItem from="1538482821161" duration="1846000" />
       <workItem from="1538554393307" duration="13354000" />
       <workItem from="1538576633860" duration="17000" />
-      <workItem from="1538576672535" duration="37267000" />
+      <workItem from="1538576672535" duration="37412000" />
+      <workItem from="1539946837859" duration="107000" />
+      <workItem from="1540210093007" duration="2371000" />
+      <workItem from="1540213263333" duration="5588000" />
+      <workItem from="1540382858520" duration="6306000" />
+      <workItem from="1540540412673" duration="3177000" />
+      <workItem from="1540544595762" duration="8482000" />
+      <workItem from="1542028712736" duration="4491000" />
+      <workItem from="1542132830997" duration="4103000" />
+      <workItem from="1542202487131" duration="7589000" />
+      <workItem from="1542290697558" duration="2757000" />
+      <workItem from="1543842354920" duration="6967000" />
+      <workItem from="1543921642357" duration="2000" />
+      <workItem from="1544015213432" duration="7592000" />
+      <workItem from="1544717930485" duration="8825000" />
+      <workItem from="1545320622595" duration="5261000" />
+      <workItem from="1546006255404" duration="6408000" />
+      <workItem from="1546872513533" duration="4960000" />
+      <workItem from="1547803162018" duration="15739000" />
+      <workItem from="1548162507408" duration="967000" />
+      <workItem from="1548167633459" duration="8651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59808000" />
+    <option name="totallyTimeSpent" value="170296000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21173105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20529328" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.48855507" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.444206" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24892704" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.121176474" sideWeight="0.49722221" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57799274" sideWeight="0.4549356" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12091898" sideWeight="0.49722221" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2394196" sideWeight="0.555794" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3470375" sideWeight="0.5450644" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.48855507" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57799274" sideWeight="0.4549356" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3470375" sideWeight="0.5450644" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19957082" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25822604" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12091898" sideWeight="0.49722221" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -588,73 +824,12 @@
           <line>5</line>
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes/fos-user.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="63" lean-forward="false" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="26" column="1" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <element signature="e#31#73#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile" />
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d14980d9-a533-44ad-9e5b-e10cffb4e739/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/fos_user.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/framework.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -663,88 +838,217 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docker/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="465">
+          <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+    <entry file="file://$PROJECT_DIR$/config/packages/swiftmailer.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Profile/detail.html.twig.html" />
-    <entry file="file://$PROJECT_DIR$/templates/baseAuth.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/Security/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <marker date="1530982767000" expanded="true" signature="46:3224" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="53:805" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="866:3216" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="884:1706" ph="{% block navbar ...%}" />
-            <marker date="1530982767000" expanded="true" signature="968:1690" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="996:1683" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="1042:1425" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="1202:1410" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="1465:1671" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="1501:1656" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="1539:1637" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="1752:2595" ph="..." />
-            <marker date="1530982767000" expanded="false" signature="1796:1861" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="1875:1915" ph="{% block content ...%}" />
-            <marker date="1530982767000" expanded="true" signature="1945:2588" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="1977:2574" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="1995:2281" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="2016:2262" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="2317:2559" ph="..." />
-            <marker date="1530982767000" expanded="false" signature="2335:2341" ph="©" />
-            <marker date="1530982767000" expanded="true" signature="2365:2452" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="2784:3208" ph="..." />
-            <marker date="1530982767000" expanded="true" signature="2833:2883" ph="{...}" />
-            <marker date="1530982767000" expanded="true" signature="3016:3093" ph="{...}" />
-            <marker date="1530982767000" expanded="true" signature="3117:3197" ph="{...}" />
-          </folding>
+        <state relative-caret-position="480">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profile/editObject.html.twig">
+    <entry file="das://table:/b28c6d80/d14980d9-a533-44ad-9e5b-e10cffb4e739/sridar.fos_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="96" column="14" lean-forward="false" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
+        <state relative-caret-position="165">
+          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d14980d9-a533-44ad-9e5b-e10cffb4e739/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/objet/searchShow.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="27" column="74" lean-forward="false" selection-start-line="27" selection-start-column="74" selection-end-line="27" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/echange/echangeByUser.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="95" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="70" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/profile/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="49" column="34" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="214" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/nav.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="69" lean-forward="false" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/b28c6d80/d14980d9-a533-44ad-9e5b-e10cffb4e739/sridar.amis">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/amis/showAmis.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Echange.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="37" column="17" lean-forward="false" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profile/addObject.html.twig">
+    <entry file="das://table:/b28c6d80/d14980d9-a533-44ad-9e5b-e10cffb4e739/sridar.echange">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-sync.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="96" selection-end-column="14" />
+        <state relative-caret-position="60">
+          <caret line="4" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="95" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/symfony.lock">
+    <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2611">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/LandingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profile/detailObject.html.twig">
+    <entry file="file://$PROJECT_DIR$/config/packages/api_platform.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="32" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="132" selection-end-column="14" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/nelmio_cors.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes/fos_user.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Classe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/src/App.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/ClasseRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/SchoolRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/docker-compose-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -756,65 +1060,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+    <entry file="file://$PROJECT_DIR$/templates/inventaire/showObject.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1549">
-          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding>
-            <element signature="e#31#73#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/nav.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        <state relative-caret-position="305">
+          <caret line="49" column="72" lean-forward="false" selection-start-line="49" selection-start-column="72" selection-end-line="49" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profile/showObject.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Repository/ObjetRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="30" column="57" lean-forward="false" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
+        <state relative-caret-position="-307">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/objet/detailObjet.html.twig">
+    <entry file="file://$PROJECT_DIR$/config/bundles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="58" column="59" lean-forward="false" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
+        <state relative-caret-position="30">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/mariadb/docker-compose.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/EchangeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/Security/login.html.twig">
+    <entry file="file://$PROJECT_DIR$/config/routes/fos-user.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -822,180 +1092,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Landing/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Controller/ObjetController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="97" column="118" lean-forward="false" selection-start-line="97" selection-start-column="95" selection-end-line="97" selection-end-column="118" />
+        <state relative-caret-position="-431">
+          <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/Registration/register.html.twig">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-155">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/TrocDemandeForm.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/EchangeType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ObjetType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/Registration/register_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="125" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/Security/login_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="47" column="14" lean-forward="false" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Objet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="75" column="7" lean-forward="false" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/LandingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/indexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ObjetController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="56" column="59" lean-forward="false" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
-          <folding>
-            <element signature="e#119#142#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/b28c6d80/d14980d9-a533-44ad-9e5b-e10cffb4e739/sridar.fos_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/b28c6d80/d14980d9-a533-44ad-9e5b-e10cffb4e739/sridar.echange">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes/fos-user.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="63" lean-forward="false" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        <state relative-caret-position="146">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ProfileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="1715">
+          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="159" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Controller/AmisController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="48" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="14" />
+        <state relative-caret-position="285">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="247" column="32" lean-forward="true" selection-start-line="247" selection-start-column="32" selection-end-line="247" selection-end-column="32" />
+        <state relative-caret-position="-1037">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="158" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Echange.php">
+    <entry file="file://$PROJECT_DIR$/src/Service/MailService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+        <state relative-caret-position="388">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/TrocController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="62" column="29" lean-forward="false" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="29" />
+        <state relative-caret-position="375">
+          <caret line="30" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
           <folding>
             <element signature="e#119#142#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/echange/echangeByVendeur.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Repository/AmisRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="21" column="68" lean-forward="false" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/echange/echangeByUser.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/profile/detail.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        <state relative-caret-position="295">
+          <caret line="37" column="29" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="187" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-336">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/fos_user.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/assets.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/InventaireController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="140" column="59" lean-forward="false" selection-start-line="140" selection-start-column="46" selection-end-line="140" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Amis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Objet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="60" column="1" lean-forward="true" selection-start-line="60" selection-start-column="1" selection-end-line="64" selection-end-column="5" />
           <folding />
         </state>
       </provider>

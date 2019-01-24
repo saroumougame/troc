@@ -9,7 +9,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Amies;
+use App\Entity\Amis;
 use App\Entity\Objet;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -30,13 +30,14 @@ class AmisController extends AbstractController
 
       $user = $this->getUser();
 
-      $amis  = $this->getDoctrine()->getRepository(Amis::class)->findAll();
+      $amis  = $this->getDoctrine()->getRepository(Amis::class)->findBy(array('user'=> $user->getId()));
+
+        return $this->render('amis/showAmis.html.twig',
+            array('amis' => $amis)
+        );
 
 
-        dump($amis);
-//        return $this->render('home/index.html.twig',
-//            array('allObjet' => $allObjet)
-//        );
+
     }
 
 
