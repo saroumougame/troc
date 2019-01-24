@@ -1,0 +1,34 @@
+{
+  "name": "Asset",
+  "version": "1.0.0",
+  "description": "Asset module by Skyflow",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "./node_modules/.bin/webpack --mode=development --config=webpack/webpack.config.dev.js",
+    "build": "./node_modules/.bin/webpack --mode=production --config=webpack/webpack.config.prod.js",
+    "watch": "./node_modules/.bin/webpack --mode=development --config=webpack/webpack.config.dev.js --watch"
+  },
+  "keywords": [],
+  "author": "Skyflow - Franck DIOMANDE <fkdiomande@gmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "@babel/preset-react": "^7.0.0-beta.46",
+    "babel-loader": "^8.0.0-beta.2",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.8.1",
+    "webpack-cli": "^2.1.3"
+  }
+}
