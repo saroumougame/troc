@@ -1,10 +1,13 @@
 <?php
+
 /**
  * Created by PhpStorm.
- * User: sridar
- * Date: 18/01/2019
- * Time: 11:31
+ * User: skumb
+ * Date: 23/01/2019
+ * Time: 16:20
  */
+
+
 
 namespace App\Service;
 
@@ -25,20 +28,20 @@ class MailService
 
     public function GetMessageEchange($statue,$echange){
 
-if ($statue === false){
+        if ($statue === false){
 
-    $msg = 'Bonjour, '.$echange->getUserVendeur()->getUsername().' a refuser votre proposition d\'echanger le objet';
+            $msg = 'Bonjour, '.$echange->getUserVendeur()->getUsername().' a refuser votre proposition d\'echanger le objet';
 
-}else{
-
-
-    $msg = 'Bonjour, '.$echange->getUserVendeur()->getUsername().' a accepter votre proposition d\'echanger le objet';
-
-}
+        }else{
 
 
+            $msg = 'Bonjour, '.$echange->getUserVendeur()->getUsername().' a accepter votre proposition d\'echanger le objet';
 
-return $msg;
+        }
+
+
+
+        return $msg;
 
 
 
