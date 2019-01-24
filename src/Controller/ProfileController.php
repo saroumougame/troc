@@ -142,6 +142,21 @@ class ProfileController extends Controller
 
 
 
+ /**
+     * @Route("/amis/{user}", name="profile_amis_detail")
+     */
+    public function showAmisAction(User $user)
+    {
+
+        $userObjet = $this->getDoctrine()->getRepository(Objet::class)->findBy(array('user'=>  $user->getId()));
+
+
+        return $this->render('profile/detail.html.twig', array(
+            'user' => $user,
+            'allObjet' => $userObjet
+        ));
+    }
+
 
 
 

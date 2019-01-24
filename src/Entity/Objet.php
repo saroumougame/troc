@@ -151,7 +151,19 @@ class Objet
      */
     protected $namePhoto;
 
+    /**
+    * @var boolean
+    *
+    * @ORM\Column(name=“remove”, type=“boolean”, nullable=true)
+    */
+    private $delete;
 
+
+   public function removeAt(){
+
+      return $this->delete = true;
+
+   }
 
     public function setPhoto(File $file = null)
     {
