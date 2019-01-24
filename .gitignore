@@ -24,3 +24,5 @@ yarn-error.log
 \.docker-sync/
 
 \.idea/
+
+public/assets/files/*
