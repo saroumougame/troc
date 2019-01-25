@@ -277,12 +277,12 @@ class AmisController extends AbstractController
         foreach ($amis as $ami){
 
             $userAmis = $ami->getAmis();
-            dump($userAmis);
+            //dump($userAmis);
 
             $objet = $this->getDoctrine()->getRepository(Objet::class)->findBy(array('user' => $userAmis->getId()));
 
 
-            foreach ($objet as $objets) {
+            //foreach ($objet as $objets) {
 
 //                dump($objets);
 //
@@ -297,7 +297,7 @@ class AmisController extends AbstractController
 
 
 
-            }
+            //}
 
     }
         return $this->render('amis/filActu.html.twig', array(
