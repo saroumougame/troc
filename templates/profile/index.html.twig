@@ -88,7 +88,7 @@
                                                         <th scope="row"><a href="{{ path('objet_detail', {'objet': histTrocPropos.objectVendeur.id}) }}"> {{ histTrocPropos.objectAchteur.nom }}</a>   </th>
                                                         <td><a href="{{ path('objet_detail', {'objet': histTrocPropos.objectVendeur.id}) }}">{{ histTrocPropos.objectVendeur.nom }}</a> </td>
                                                         <td>{{ histTrocPropos.userVendeur.username }}</td>
-                                                        <td>Date</td>
+                                                        <td>{{ histTrocPropos.objectVendeur.created|date("m/d/Y") }}</td>
                                                     </tr>
 
 
@@ -145,7 +145,7 @@
                                                 <th scope="row"><a href="{{ path('objet_detail', {'objet': histTrocDemandes.objectVendeur.id}) }}"> {{ histTrocDemandes.objectAchteur.nom }}</a>   </th>
                                                 <td><a href="{{ path('objet_detail', {'objet': histTrocDemandes.objectVendeur.id}) }}">{{ histTrocDemandes.objectVendeur.nom }}</a> </td>
                                                 <td>{{ histTrocDemandes.userVendeur.username }}</td>
-                                                <td>Date</td>
+                                                <td>{{ histTrocDemandes.objectVendeur.created|date("m/d/Y") }}</td>
                                             </tr>
 
 

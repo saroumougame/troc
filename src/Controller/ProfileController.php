@@ -79,7 +79,6 @@ class ProfileController extends Controller
 
             /* ---------- */
 
-
             $file = $UpdateUser->getPhoto();
             $someNewFilename = $file->getClientOriginalName();
             $directory = $this->getParameter('path_photo_profil');
