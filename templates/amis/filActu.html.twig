@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <section class="content">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Fils actualités
+                        {#<small>resultats {{ nbresult }}</small>#}
+                    </h2>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <ul class="breadcrumb float-md-right">
+                        <li class="breadcrumb-item"><a href=""><i class="zmdi zmdi-group-work"></i> Amis</a></li>
+                        <li class="breadcrumb-item active"> Fils actualités</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {% for objets in objet  %}
+
+
+        {#{{ dump(ami.amis) }}#}
+
+        {#{% for objets in ami.amis.objet  %}#}
+            <div class="col-lg-12 col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h2><strong> {{ objets.nom }} </strong>
+                            <small>{{ objets.user.username }}</small>
+                            {#<a href="{{ path('amis_add',{'user': ami.id}) }}">abonner</a>#}
+                        </h2>
+                        <ul class="header-dropdown">
+                        <li class="remove">
+                        <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <div class="cp_img">
+                                    <img src="{{ asset('assets/files/photo/objet/')~ objets.namePhoto  }}" alt="Product" class="img-fluid" />
+                                    </div>
+                                    {#{{ ami.description }}#}
+                                    {#<a href="{{ path('amis_add',{'user': ami.id}) }}" class="btn btn-primary waves-effect"><i class="zmdi zmdi-plus"></i></a>#}
+                                    {#<li class="breadcrumb-item"><a href=""><i class="zmdi zmdi-group-work"></i>Amis</a>#}
+                                    {{ objets.description | raw }}
+                                    <br>
+                                    <a href="{{  path('objet_detail',{'objet': objets.id}) }}" class="btn btn-primary waves-effect">Proposer un troc</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {#</div>#}
+
+
+            {#<!-- #END# Custom Content -->#}
+            {#</div>#}
+            {#</div>#}
+        {#{%   endfor %}#}
+
+        {%   endfor %}
+
+
+    </section>
+
+
+{% endblock %}
+
+
+{% block js %}
+    <script src="{{ asset('assets/Oreo/bundles/libscripts.bundle.js') }}"></script>
+    <script src="{{ asset('assets/Oreo/bundles/vendorscripts.bundle.js') }}"></script>
+    <script src="{{ asset('assets/Oreo/bundles/morrisscripts.bundle.js') }}"></script>
+    <script src="{{ asset('assets/Oreo/bundles/jvectormap.bundle.js') }}"></script>
+    <script src="{{ asset('assets/Oreo/bundles/knob.bundle.js') }}"></script>
+    <script src="{{ asset('assets/Oreo/bundles/mainscripts.bundle.js') }}"></script>
+    <script src="{{ asset('assets/Oreo/js/pages/index.js') }}"></script>
+    <script src="{{ asset('assets/Oreo/plugins/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('assets/Oreo/js/pages/forms/editors.js') }}"></script>
+
+
+{% endblock %}

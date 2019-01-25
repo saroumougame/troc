@@ -252,6 +252,49 @@ class AmisController extends AbstractController
 
 
 
+    /**
+     * @Route("/fileactu", name="filactu")
+     */
+    public function filActu()
+    {
+
+
+        $amis = $this->getDoctrine()->getRepository(Amis::class)->findBy(array('user' => $this->getUser()->getId()));
+
+//        $objet  = $this->getDoctrine()->getRepository(Objet::class)->findAll();
+
+        foreach ($amis as $ami){
+
+            $userAmis = $ami->getAmis();
+            dump($userAmis);
+
+            $objet = $this->getDoctrine()->getRepository(Objet::class)->findBy(array('user' => $userAmis->getId()));
+
+
+            foreach ($objet as $objets) {
+
+//                dump($objets);
+//
+////                foreach ($user as $amis){
+////                    dump($user);
+////                    $user = $this->getDoctrine()->getRepository(User::class)->findBy(array('user' => $amis->getAmis()->getAmis()));
+////
+////                    dump($user->getObjet());
+////
+////                }
+
+
+
+
+            }
+
+    }
+        return $this->render('amis/filActu.html.twig', array(
+            'objet' => $objet,
+        ));
+
+    }
+
 
 
 }
