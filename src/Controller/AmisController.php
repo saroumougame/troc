@@ -229,27 +229,38 @@ class AmisController extends AbstractController
      */
     public function setAmis(User $user){
 
+        $me = $this->getUser();
 
+        $amis  = $this->getDoctrine()->getRepository(Amis::class)->findBy(array('user'=> $me, 'amis' => $user));
 
-        $em = $this->getDoctrine()->getManager();
-        $userconnect = $this->getUser();
-        $newAmis = new Amis();
+        if(empty($amis)){
 
-        $newAmis->setUser($userconnect);
-        $newAmis->setAmis($user);
-        $em->persist($newAmis);
+            $em = $this->getDoctrine()->getManager();
+            $userconnect = $this->getUser();
+            $newAmis = new Amis();
 
-        $em->flush();
+            $newAmis->setUser($userconnect);
+            $newAmis->setAmis($user);
+            $em->persist($newAmis);
+
+            $em->flush();
+
+            // On met amis dans l'autre sens aussi
+
+            $newAmis2 = new Amis();
+
+            $newAmis2->setUser($user);
+            $newAmis2->setAmis($userconnect);
+
+            $em->persist($newAmis2);
+
+            $em->flush();
+        }
+
 
         return $this->redirectToRoute('amis_show');
 
-
-
-
-
-
     }
-
 
 
     /**
