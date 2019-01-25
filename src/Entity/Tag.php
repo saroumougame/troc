@@ -5,6 +5,7 @@
  * Date: 24/10/2018
  * Time: 14:26
  */
+
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -40,7 +41,8 @@ class Tag // EXAMPLE DU COURS
      */
     private $objet;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->objet = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
@@ -91,8 +93,6 @@ class Tag // EXAMPLE DU COURS
     {
         $this->nom = $nom;
     }
-
-
 
 
 }

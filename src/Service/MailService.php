@@ -8,9 +8,7 @@
  */
 
 
-
 namespace App\Service;
-
 
 
 use App\Entity\Echange;
@@ -23,62 +21,44 @@ class MailService
 
     public function __construct(\Swift_Mailer $mailer)
     {
-
         $this->mailer = $mailer;
-
     }
 
 
-    public function GetMessageEchange($statue,$echange){
+    public function GetMessageEchange($statue, $echange)
+    {
+        if ($statue === false) {
 
-        if ($statue === false){
+            $msg = 'Bonjour, ' .
+                $echange->getUserVendeur()->getUsername() .
+                ' a refuser votre proposition d\'echanger' .
+                $echange->getObjectVendeur()->getNom() . '.';
 
-            $msg = 'Bonjour, '.$echange->getUserVendeur()->getUsername().' a refuser votre proposition d\'echanger
-            '. $echange->getObjectVendeur()->getNom().'.';
-
-        }else{
-
-            $msg = 'Bonjour, '.$echange->getUserVendeur()->getUsername().' a accepter votre proposition d\'echanger
-            '. $echange->getObjectVendeur()->getNom().'.';
+        } else {
+            $msg = 'Bonjour, ' .
+                $echange->getUserVendeur()->getUsername() .
+                ' a accepter votre proposition d\'echanger' .
+                $echange->getObjectVendeur()->getNom() . '.';
         }
-
-
-
         return $msg;
 
-
-
     }
 
 
-
-    public function notificationMail($statue,$echange){
-
-
+    public function notificationMail($statue, $echange)
+    {
         $msg = $this->GetMessageEchange($statue, $echange);
-
-
-
-
         $mail = $echange->getUserAcheteur()->getEmail();
-
         $mailTo = $echange->getUserVendeur()->getEmail();
-
-
 
         $message = (new \Swift_Message('Troc notification'))
             ->setFrom('troc@troc.com')
             ->setTo($mail)
             ->addPart(
-                $msg.$mailTo
+                $msg . $mailTo
             );
 
-
-
         return $this->mailer->send($message) > 0;
-
-
-
     }
 
 

@@ -27,7 +27,6 @@ use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 
-
 /**
  * @Route("/objet")
  */
@@ -40,8 +39,6 @@ class ObjetController extends AbstractController
      */
     public function indexAction(Request $request, Objet $objet)
     {
-
-
         $formDemandeTroc = $this->getForm($objet->getId());
         $formDemandeTroc->handleRequest($request);
         if ($formDemandeTroc->isSubmitted() && $formDemandeTroc->isValid()) {
@@ -103,11 +100,8 @@ class ObjetController extends AbstractController
 
     public function searchObjet()
     {
-
-
         $objet = new Objet();
         $form = $this->getFormSearch($objet);
-
 
         return $this->render(
             'objet/searchObjet.html.twig',
@@ -120,23 +114,17 @@ class ObjetController extends AbstractController
 
     public function ObjetbySearch($searchObjet)
     {
-
-
         $entityManager = $this->getDoctrine()->getManager();
         $param = array('nom' => $searchObjet);
-
         $objet = $entityManager->getRepository(Objet::class)->getObjetBySearch($param);
 
         return $objet;
-
-
     }
 
-//______
-
-    public function getFormSearch($objet){
 
 
+    public function getFormSearch($objet)
+    {
 
         $form = $this->createFormBuilder($objet, array(
             'action' => $this->generateUrl('objet_search'),
@@ -159,7 +147,6 @@ class ObjetController extends AbstractController
     }
 
 
-
     /**
      * @Route("/objet/search/", name="objet_search")
      */
@@ -179,6 +166,5 @@ class ObjetController extends AbstractController
             ));
         }
     }
-
 
 }

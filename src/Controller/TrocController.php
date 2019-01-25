@@ -9,7 +9,6 @@
 namespace App\Controller;
 
 
-
 use App\Entity\Echange;
 use App\Form\ObjetType;
 
@@ -27,7 +26,6 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use App\Service\MailService;
 
 
-
 /**
  * @Route("/troc")
  */
@@ -38,12 +36,11 @@ class TrocController extends AbstractController
     /**
      * @Route("/demande", name="troc_echange")
      */
-    public function EchangeByUserAction(){
+    public function EchangeByUserAction()
+    {
 
-    $user =  $this->getUser();
-
-    $demandeByUser = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userAcheteur'=> $user));
-
+        $user = $this->getUser();
+        $demandeByUser = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userAcheteur' => $user));
 
 
         return $this->render('echange/echangeByUser.html.twig', array(
@@ -57,12 +54,11 @@ class TrocController extends AbstractController
     /**
      * @Route("/proposition", name="troc_proposition")
      */
-    public function EchangeByVendeurAction(){
+    public function EchangeByVendeurAction()
+    {
 
-        $user =  $this->getUser();
-
-        $demandeByVendeur = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userVendeur'=> $user, 'statue' => 1));
-
+        $user = $this->getUser();
+        $demandeByVendeur = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userVendeur' => $user, 'statue' => 1));
 
 
         return $this->render('echange/echangeByVendeur.html.twig', array(
@@ -73,31 +69,24 @@ class TrocController extends AbstractController
     }
 
 
-
     /**
      * @Route("/accepter/{echange}", name="accepter_proposition")
      *
      */
-    public function accepterEchangeAction(Echange $echange, MailService $mailService){
+    public function accepterEchangeAction(Echange $echange, MailService $mailService)
+    {
 
-
-        $objAcheter =$echange->getObjectAchteur();
-
+        $objAcheter = $echange->getObjectAchteur();
         $objVendeur = $echange->getObjectVendeur();
-
         $echange->setStatue(2);
         $em = $this->getDoctrine()->getManager();
         $objVendeur->removeAt();
         $objAcheter->removeAt();
         $em->merge($echange);
         $em->flush();
-
         $mailService->notificationMail(true, $echange);
 
-
-
-       return $this->redirectToRoute('troc_proposition');
-
+        return $this->redirectToRoute('troc_proposition');
     }
 
 
@@ -105,22 +94,16 @@ class TrocController extends AbstractController
      * @Route("/refuser/{echange}", name="refuser_proposition")
      *
      */
-    public function refuserEchangeAction(Echange $echange, MailService $mailService){
-
-
+    public function refuserEchangeAction(Echange $echange, MailService $mailService)
+    {
         $em = $this->getDoctrine()->getManager();
-
         $em->remove($echange);
         $em->flush();
-
         $mailService->notificationMail(false, $echange);
-
 
         return $this->redirectToRoute('troc_proposition');
 
     }
-
-
 
 
 }

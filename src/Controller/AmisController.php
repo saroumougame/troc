@@ -25,13 +25,12 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 
-
-
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use App\Form\EchangeType;
 use Doctrine\ORM\UserRepository;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+
 /**
  * @Route("/amis")
  */
@@ -43,15 +42,14 @@ class AmisController extends AbstractController
     public function home()
     {
 
-      $user = $this->getUser();
+        $user = $this->getUser();
 
-      $amis  = $this->getDoctrine()->getRepository(Amis::class)->findBy(array('user'=> $user->getId()));
+        $amis = $this->getDoctrine()->getRepository(Amis::class)->findBy(array('user' => $user->getId()));
 
 
         return $this->render('amis/showAmis.html.twig',
             array('amis' => $amis)
         );
-
 
 
     }
@@ -85,7 +83,7 @@ class AmisController extends AbstractController
         $me = $this->getUser();
 
         $repository = $em->getRepository(Msg::class);
-        $messages = $repository->findAllMsg($user->getId(), $me->getId()); 
+        $messages = $repository->findAllMsg($user->getId(), $me->getId());
 
         return $this->render('amis/messageAmis.html.twig', array(
             'messages' => $messages,
@@ -129,25 +127,20 @@ class AmisController extends AbstractController
             'label' => 'Écrire un message',
             'attr' => array('class' => 'form-control w-100'),
         ))
-        ->add('submit', SubmitType::class,
-            array(
-                'label' => 'Envoyer le message',
-                'attr' => array(
-                    'class' => 'btn btn-primary btn-round waves-effect p-3 mt-3'))
+            ->add('submit', SubmitType::class,
+                array(
+                    'label' => 'Envoyer le message',
+                    'attr' => array(
+                        'class' => 'btn btn-primary btn-round waves-effect p-3 mt-3'))
 
-        );
+            );
 
         return $form->getForm();
     }
 
 
-
-
-
     public function searchAmis()
     {
-
-
 
         $amis = new User();
         $form = $this->getFormSearch($amis);
@@ -158,29 +151,21 @@ class AmisController extends AbstractController
             array('searchAmis' => $form->createView())
         );
 
-
     }
 
 
     public function AmisbySearch($searchAmis)
     {
-
-
         $entityManager = $this->getDoctrine()->getManager();
         $param = array('username' => $searchAmis);
-
         $objet = $entityManager->getRepository(User::class)->getUserBySearch($param);
 
         return $objet;
-
-
     }
 
-//______
 
-    public function getFormSearch($objet){
-
-
+    public function getFormSearch($objet)
+    {
 
         $form = $this->createFormBuilder($objet, array(
             'action' => $this->generateUrl('amis_search'),
@@ -201,7 +186,6 @@ class AmisController extends AbstractController
             );
         return $form->getForm();
     }
-
 
 
     /**
@@ -227,18 +211,18 @@ class AmisController extends AbstractController
     /**
      * @Route("/add/{user}", name="amis_add")
      */
-    public function setAmis(User $user){
+    public function setAmis(User $user)
+    {
 
         $me = $this->getUser();
 
-        $amis  = $this->getDoctrine()->getRepository(Amis::class)->findBy(array('user'=> $me, 'amis' => $user));
+        $amis = $this->getDoctrine()->getRepository(Amis::class)->findBy(array('user' => $me, 'amis' => $user));
 
-        if(empty($amis)){
+        if (empty($amis)) {
 
             $em = $this->getDoctrine()->getManager();
             $userconnect = $this->getUser();
             $newAmis = new Amis();
-
             $newAmis->setUser($userconnect);
             $newAmis->setAmis($user);
             $em->persist($newAmis);
@@ -248,12 +232,9 @@ class AmisController extends AbstractController
             // On met amis dans l'autre sens aussi
 
             $newAmis2 = new Amis();
-
             $newAmis2->setUser($user);
             $newAmis2->setAmis($userconnect);
-
             $em->persist($newAmis2);
-
             $em->flush();
         }
 
@@ -272,40 +253,17 @@ class AmisController extends AbstractController
 
         $amis = $this->getDoctrine()->getRepository(Amis::class)->findBy(array('user' => $this->getUser()->getId()));
 
-//        $objet  = $this->getDoctrine()->getRepository(Objet::class)->findAll();
-
-        foreach ($amis as $ami){
+        foreach ($amis as $ami) {
 
             $userAmis = $ami->getAmis();
-            dump($userAmis);
-
             $objet = $this->getDoctrine()->getRepository(Objet::class)->findBy(array('user' => $userAmis->getId()));
 
-
-            foreach ($objet as $objets) {
-
-//                dump($objets);
-//
-////                foreach ($user as $amis){
-////                    dump($user);
-////                    $user = $this->getDoctrine()->getRepository(User::class)->findBy(array('user' => $amis->getAmis()->getAmis()));
-////
-////                    dump($user->getObjet());
-////
-////                }
-
-
-
-
-            }
-
-    }
+        }
         return $this->render('amis/filActu.html.twig', array(
             'objet' => $objet,
         ));
 
     }
-
 
 
 }

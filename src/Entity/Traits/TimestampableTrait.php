@@ -12,7 +12,8 @@ namespace App\Entity\Traits;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 
-trait TimestampableTrait{
+trait TimestampableTrait
+{
 
 
     /**
@@ -74,8 +75,6 @@ trait TimestampableTrait{
     {
         $this->updated = $updated;
     }
-
-
 
 
 }

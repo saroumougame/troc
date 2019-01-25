@@ -53,7 +53,6 @@ class Echange
     protected $statue;
 
 
-
     /**
      * @return mixed
      */
@@ -149,7 +148,6 @@ class Echange
     {
         $this->statue = $statue;
     }
-
 
 
     use TimestampableTrait;
