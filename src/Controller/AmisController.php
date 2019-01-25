@@ -14,7 +14,7 @@ use Doctrine\ORM\QueryBuilder;
 use App\Entity\Msg;
 use App\Entity\User;
 use App\Entity\Objet;
-use App\Entity\User;
+
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -147,7 +147,7 @@ class AmisController extends AbstractController
     public function searchAmis()
     {
 
-        dump('toto');
+
 
         $amis = new User();
         $form = $this->getFormSearch($amis);
@@ -249,6 +249,8 @@ class AmisController extends AbstractController
 
 
     }
+
+
 
 
 
