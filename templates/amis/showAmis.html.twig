@@ -39,7 +39,7 @@
                             <div class="body">
                                 <div class="cp_img">
                                     {#{{ ami.amis.NamePhoto }}#}
-                                    <img src="{{ asset('assets/files/')~ ami.amis.namePhoto  }}" alt="Product" class="img-fluid" />
+                                    <img src="{{ asset('assets/files/photo/profile/')~ ami.amis.namePhoto  }}" class="img-fluid" />
                                     <div class="hover">
                                         <a href="{{  path('profile_amis_detail',{'user': ami.amis.id}) }}" class="btn btn-primary waves-effect"><i class="zmdi zmdi-plus"></i></a>
                                         <a href="" class="btn btn-primary waves-effect"><i class="zmdi zmdi-delete"></i></a>
