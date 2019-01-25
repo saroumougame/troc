@@ -18,7 +18,7 @@
                         </small>
 
 
-                        <button class="btn btn-info btn-round" data-toggle="modal" data-target="#largeModal">Inviter un amis</button></small>
+                        <button class="btn btn-info btn-round" data-toggle="modal" data-target="#largeModal">Inviter un ami</button></small>
                     </h2>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
@@ -66,14 +66,13 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="title" id="largeModalLabel">recherche un utilisateur</h4>
+                    <h4 class="title" id="largeModalLabel">Rechercher un utilisateur</h4>
                 </div>
 
                 {{ render(controller(
                     'App\\Controller\\AmisController::searchAmis'
                 )) }}
 
-                    <button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">CLOSE</button>
                 </div>
             </div>
         </div>

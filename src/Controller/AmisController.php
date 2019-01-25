@@ -241,11 +241,18 @@ class AmisController extends AbstractController
 
         $em->flush();
 
+        // On met amis dans l'autre sens aussi
+
+        $newAmis2 = new Amis();
+
+        $newAmis2->setUser($user);
+        $newAmis2->setAmis($userconnect);
+
+        $em->persist($newAmis2);
+
+        $em->flush();
+
         return $this->redirectToRoute('amis_show');
-
-
-
-
 
 
     }
