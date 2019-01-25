@@ -66,9 +66,6 @@ class User extends BaseUser
      */
     private $msgs;
 
-    
-
-
 
     public function setPhoto(File $file = null)
     {
@@ -81,7 +78,6 @@ class User extends BaseUser
     }
 
 
-
     public function setNamePhoto($namePhoto)
     {
         $this->namePhoto = $namePhoto;
@@ -91,8 +87,6 @@ class User extends BaseUser
     {
         return $this->namePhoto;
     }
-
-
 
 
     /**
@@ -187,11 +181,6 @@ class User extends BaseUser
 //    {
 //        return $this->objet;
 //    }
-
-
-
-
-
 
 
 }

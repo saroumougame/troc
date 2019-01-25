@@ -16,7 +16,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Entity\Echange;
 
 
-
 class indexController extends AbstractController
 {
     /**
@@ -25,13 +24,8 @@ class indexController extends AbstractController
     public function home()
     {
 
-
-
         $params = array('user' => $this->getUser()->getId());
-
-        $allObjet  = $this->getDoctrine()->getRepository(Objet::class)->getObjetSell($params);
-
-
+        $allObjet = $this->getDoctrine()->getRepository(Objet::class)->getObjetSell($params);
 
         return $this->render('home/index.html.twig',
             array('allObjet' => $allObjet)

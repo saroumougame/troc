@@ -36,29 +36,18 @@ class ProfileController extends Controller
      */
     public function showAction()
     {
-
-
         $User = $this->getUser();
         $formUser = $this->getForm($User);
         $entityManager = $this->getDoctrine()->getManager();
-//        $eventUser = $entityManager->getRepository(Event::class)->findBy(array('useradd' => $this->getUser()->getId()), null, 5);
-//        $nbUser = $this->statUser($User, $entityManager);
-
-        $demandeByVendeur = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userVendeur'=> $User, 'statue' => 2));
-
-
-
-        $demandeByUser = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userAcheteur'=> $User, 'statue' => 2));
-
+        $demandeByVendeur = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userVendeur' => $User, 'statue' => 2));
+        $demandeByUser = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userAcheteur' => $User, 'statue' => 2));
 
 
         return $this->render('profile/index.html.twig', array(
             'histTrocPropo' => $demandeByVendeur,
             'histTrocDemande' => $demandeByUser,
-//   'User' => $User,
-//            'eventUser' => $eventUser,
             'formUser' => $formUser->createView(),
-//            'nbEvent' => $nbUser,
+
         ));
     }
 
@@ -71,42 +60,31 @@ class ProfileController extends Controller
         $User = $this->getUser();
         $formUser = $this->getForm($User);
         $formUser->handleRequest($request);
+
         if ($formUser->isSubmitted()) {
 
             $UpdateUser = $formUser->getData();
             $User->setUsername($UpdateUser->getUsername());
             $User->setEmail($UpdateUser->getEmail());
-
-            /* ---------- */
-
             $file = $UpdateUser->getPhoto();
             $someNewFilename = $file->getClientOriginalName();
             $directory = $this->getParameter('path_photo_profil');
             $file->move($directory, $someNewFilename);
             $User->setNamePhoto($someNewFilename);
-
-
-            /* ---------- */
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($User);
             $entityManager->flush();
+
             return $this->redirect($this->generateUrl('profile_show'));
-
-
 
         }
 
         return $this->render('Profile/index.html.twig', array(
-//   'User' => $User,
-//            'eventUser' => $eventUser,
             'formUser' => $formUser->createView(),
-//            'nbEvent' => $nbUser,
         ));
 
 
     }
-
-
 
 
     public function getForm($User)
@@ -143,13 +121,10 @@ class ProfileController extends Controller
 
     /**
      * @Route("/amis/{user}", name="profile_amis_detail")
-    */
+     */
     public function showAmisAction(User $user)
     {
-
-        $userObjet = $this->getDoctrine()->getRepository(Objet::class)->findBy(array('user'=>  $user->getId()));
-
-        $userObjet = $this->getDoctrine()->getRepository(Objet::class)->findBy(array('user'=>  $user->getId()));
+        $userObjet = $this->getDoctrine()->getRepository(Objet::class)->findBy(array('user' => $user->getId()));
 
         return $this->render('profile/detail.html.twig', array(
             'user' => $user,
@@ -158,12 +133,4 @@ class ProfileController extends Controller
     }
 
 
-
-
-//    private function statUser($User, $entityManager)
-//    {
-//        $eventUsercount = $entityManager->getRepository(Event::class)->findBy(array('useradd' => $this->getUser()->getId()));
-//        $nbUser = count($eventUsercount);
-//        return $nbUser;
-//    }
 }

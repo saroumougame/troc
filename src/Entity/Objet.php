@@ -58,16 +58,16 @@ class Objet
     private $delete;
 
 
-    public function removeAt(){
+    public function removeAt()
+    {
 
-       return $this->delete = true;
+        return $this->delete = true;
 
     }
 
 
-
-
-    public function __construct() {
+    public function __construct()
+    {
         $this->tags = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
@@ -91,7 +91,7 @@ class Objet
     /**
      * @return string
      */
-    public function getNom():? string
+    public function getNom(): ? string
     {
         return $this->nom;
     }
@@ -107,7 +107,7 @@ class Objet
     /**
      * @return string
      */
-    public function getDescription():? string
+    public function getDescription(): ? string
     {
         return $this->description;
     }
@@ -139,14 +139,13 @@ class Objet
 
     public function __toString()
     {
-        return (string) $this->getNom();
+        return (string)$this->getNom();
     }
 
 
 //protected $photo;
 
- use TimestampableTrait;
-
+    use TimestampableTrait;
 
 
     /**
@@ -183,8 +182,6 @@ class Objet
     {
         return $this->namePhoto;
     }
-
-
 
 
 }

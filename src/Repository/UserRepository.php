@@ -16,8 +16,6 @@ class UserRepository extends EntityRepository
     public function liste(){
     }
 
-
-
     public function getUserBySearch($param){
 
         $qb = $this->getEntityManager()->createQueryBuilder()
