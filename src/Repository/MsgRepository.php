@@ -20,45 +20,16 @@ class MsgRepository extends ServiceEntityRepository
         parent::__construct($registry, Msg::class);
     }
 
-    public function findAllMsg($une, $deux)
+    public function findAllMsg($sender, $receiver)
     {
         return $this->createQueryBuilder('msg')
-            ->andWhere('msg.id_sender = ' . $une . ' and msg.id_receiver =' . $deux)
-            ->orWhere('msg.id_sender = ' . $deux . ' and msg.id_receiver =' . $une)
+            ->andWhere('msg.id_sender = :sender and msg.id_receiver = :receiver')
+            ->orWhere('msg.id_sender = :receiver and msg.id_receiver = :sender')
             ->orderBy('msg.updated_at', 'ASC')
+            ->setParameter('sender', $sender)
+            ->setParameter('receiver', $receiver)
             ->getQuery()
-            ->getResult()
-        ;
+            ->getResult();
     }
 
-    
-
-    // /**
-    //  * @return Msg[] Returns an array of Msg objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('m')
-            ->andWhere('m.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('m.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Msg
-    {
-        return $this->createQueryBuilder('m')
-            ->andWhere('m.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }
