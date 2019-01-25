@@ -28,7 +28,7 @@
                                     <div class="profile-image">
 
                                         {% if app.user.namePhoto is not null %}
-                                            <img src="{{ asset('assets/files/')~ app.user.namePhoto  }}" alt="">
+                                            <img src="{{ asset('assets/files/photo/profile/')~ app.user.namePhoto  }}" alt="">
                                         {% else %}
                                             <div class="profile-image"> <img src="{{ asset('assets/Oreo/images/profile_av.jpg') }}" alt=""> </div>
                                         {% endif %}
