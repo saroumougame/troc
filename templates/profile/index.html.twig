@@ -1,0 +1,215 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block content %}
+    <section class="content blog-page">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Mon profil
+                    </h2>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <ul class="breadcrumb float-md-right">
+                        <li class="breadcrumb-item"><a href="{{ path('home') }}"><i class="zmdi zmdi-home"></i>Accueil</a></li>
+                        <li class="breadcrumb-item active"><a href="blog-dashboard.html">Mon profil</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <div class="card profile-header">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-12">
+                                    <div class="profile-image">
+
+                                        {% if app.user.namePhoto is not null %}
+                                            <img src="{{ asset('assets/files/photo/profile/')~ app.user.namePhoto  }}" alt="">
+                                        {% else %}
+                                            <div class="profile-image"> <img src="{{ asset('assets/Oreo/images/profile_av.jpg') }}" alt=""> </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <div class="pl-2">
+                                        <h4 class="m-t-0 m-b-0">{{ app.user.username }}</h4>
+                                        <p>Mon email : {{ app.user.email }} </p>
+                                    </div>
+
+                                    <div>
+                                        <button class="btn btn-primary btn-round " data-toggle="modal" data-target="#UserInfoModal">Modifier mes informations</button>
+                                        <br />
+                                        <a href="{{ path('fos_user_change_password') }}"><button class="btn btn-primary btn-round btn-simple">Modifier mon mot de passe</button></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2><strong>Historique</strong><small>Mes ventes</small></h2>
+
+                        </div>
+                        <div class="body">
+                            <div class="row">
+                                 <div class="body table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                <tr>
+                                                    <th>Mon objet</th>
+                                                    <th>Objet échangé</th>
+                                                    <th>Nom d'utilisateur</th>
+                                                    <th>Date</th>
+
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+
+
+                                                {% for histTrocPropos in histTrocPropo %}
+
+
+                                                    <tr>
+                                                        <th scope="row"><a href="{{ path('objet_detail', {'objet': histTrocPropos.objectVendeur.id}) }}"> {{ histTrocPropos.objectAchteur.nom }}</a>   </th>
+                                                        <td><a href="{{ path('objet_detail', {'objet': histTrocPropos.objectVendeur.id}) }}">{{ histTrocPropos.objectVendeur.nom }}</a> </td>
+                                                        <td>{{ histTrocPropos.userVendeur.username }}</td>
+                                                        <td>Date</td>
+                                                    </tr>
+
+
+                                                {% endfor %}
+
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2><strong>Historique</strong><small>Mes achats</small></h2>
+
+                        </div>
+                        <div class="body">
+                            <div class="row">
+                                <div class="body table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>Mon objet</th>
+                                            <th>Objet acheté</th>
+                                            <th>Nom d'utilisateur</th>
+                                            <th>Date</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+
+                                        {% for histTrocDemandes in histTrocDemande %}
+
+
+                                            <tr>
+                                                <th scope="row"><a href="{{ path('objet_detail', {'objet': histTrocDemandes.objectVendeur.id}) }}"> {{ histTrocDemandes.objectAchteur.nom }}</a>   </th>
+                                                <td><a href="{{ path('objet_detail', {'objet': histTrocDemandes.objectVendeur.id}) }}">{{ histTrocDemandes.objectVendeur.nom }}</a> </td>
+                                                <td>{{ histTrocDemandes.userVendeur.username }}</td>
+                                                <td>Date</td>
+                                            </tr>
+
+
+                                        {% endfor %}
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <div class="modal fade" id="UserInfoModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="title" id="defaultModalLabel">Modifier mon adresse e-mail</h4>
+                </div>
+                <div class="modal-body">
+                    {{ form_start(formUser) }}
+                    {{ form_errors(formUser) }}
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group form-">
+                            {{ form_row(formUser.email) }}
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            {{ form_row(formUser.photo) }}
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 right">
+                        {{ form_row(formUser.submit) }}
+                    </div>
+
+                    {{ form_end(formUser) }}
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

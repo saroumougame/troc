@@ -38,7 +38,15 @@ services:
         ports:
             - 80:80
         volumes:
-            - ../:/sridar
+            - ../:/sridar:cached
             - ./symfony/conf/apache2:/etc/apache2
             - ./symfony/conf/php7/php.ini:/etc/php7/php.ini
 # <------ symfony <------
+
+
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+        - 8080:8080
+        

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>AfterTech</title>
+    <title>Troc-Troc</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site Description Here">
 
@@ -64,21 +64,7 @@
                     <!--end module-->
                 </div>
                 <div class="col-lg-9 col-md-12 text-right text-left-xs text-left-sm">
-                    <div class="bar__module">
-                        <ul class="menu-horizontal text-left">
-                            <li>
-                                <a href="">
 
-                                    <span>qui somme nous</span>
-                                </a>
-
-                                <!--end dropdown container-->
-                            </li>
-                            <li class="dropdown">
-
-                            </li>
-                        </ul>
-                    </div>
                     <!--end module-->
 
                     <div class="bar__module">
@@ -124,17 +110,17 @@
                 <div class="col-md-12">
                     <div class="typed-headline">
                         <span class="h1 inline-block">TROC &mdash; Des Objets </span>
-                        <span class="h1 inline-block typed-text typed-text--cursor colorTextDynamiqueMenu" data-typed-strings="détente ,autour d'une bierre, networking, avec la concurrence, avec de futurs amis, avec mon futur employer"></span>
+                        <span class="h1 inline-block typed-text typed-text--cursor colorTextDynamiqueMenu" data-typed-strings="avec de futurs amis, avec un autre objet, avec tout le monde"></span>
                     </div>
                     <p class="lead">
-                        Troc des objets avec tout le monde
-                        <br class="hidden-xs hidden-sm" /> fait de bonne affaire
+
+                        <br class="hidden-xs hidden-sm" />
                     </p>
                     {% if app.user %}
                         <a class="btn btn--sm btn--primary type--uppercase" href="{{ path('home') }}">
-                                    <span class="btn__text">
-                                        accéder à mon espace
-                                    </span>
+                            <span class="btn__text">
+                                J'accède à mon espace
+                            </span>
                         </a>
                     {% endif %}
                 </div>
@@ -143,38 +129,12 @@
         </div>
         <!--end of container-->
     </section>
-    <section class="video video-1 text-center bg--secondary space--sm">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="modal-instance">
-                        <div class="video-play-icon video-play-icon--sm modal-trigger box-shadow"></div>
-                        <div class="modal-container">
-                            <div class="modal-content bg-dark" data-width="60%" data-height="60%">
-                                <iframe data-src="https://www.youtube.com/embed/6p45ooZOOPo?autoplay=1" allowfullscreen="allowfullscreen"></iframe>
-                            </div>
-                            <!--end of modal-content-->
-                        </div>
-                        <!--end of modal-container-->
-                    </div>
-                    <!--end of modal instance-->
-                    <h2>
-                        Je crée des after-work professionnels ou détendu en quelques click.
-                    </h2>
-                </div>
-            </div>
-            <!--end of row-->
-        </div>
-        <!--end of container-->
-    </section>
+
     <section class="text-center ">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-8">
-                    <h2>Toute vos soirée entre collégues se trouvent ici</h2>
-                    <p class="lead">
-                        Que vous vouliez vous détendre autour d'une bierre, faire la fête avec vos concurrents ou rencontré sérieusement vos futurs partenaires, vous étes au bon endroit !
-                    </p>
+                    <h2>Tous vos objets pour un potentiel troc dans une seule boutique !</h2>
                 </div>
             </div>
             <!--end of row-->
@@ -191,33 +151,28 @@
                 <div class="col-md-4">
                     <div class="feature">
                         <img alt="Image" src="{{ asset('assets/Stack/img/events/bierre-detente.jpg') }}" class="border--round" />
-                        <h4>Soirée détente - Bierre et Mylka</h4>
+                        <h4>Mes amis</h4>
 
                         <p>
-                            Le pole marketing de milka se retrouve à préparer un after-work sous le signe de la bierre,
-                            Nous avons déja le lieux, une belle brasserie du cartier st-michel.
-                            Venez en groupe peut importe votre corp de métier déguster une pinte entre collegues.
+                        Ajout d'amis, consultation de leurs inventaires d'objets, nous voulons créer un communauté digne de confiance.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature">
                         <img alt="Image" src="{{ asset('assets/Stack/img/events/club.jpg') }}" class="border--round" />
-                        <h4>After work party Mycrosoft Rex club</h4>
+                        <h4>Sécurite</h4>
 
-                        <p>
-                            Chez microsoft on sais faire la fête ! On souhaite partager la soirée et la réservation du club avec une autre entreprise, principallement dans le domaine de L'IT. De préference une grosse entreprise pour une grosse soirée !
-                        </p>
+                        <p>Afin de garder vos informations en tout sécurité, votre mail sera divulgué qu'à partir du moment ou vous choisissez de réaliser un échange.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature">
                         <img alt="Image" src="{{ asset('assets/Stack/img/events/rooftop.jpg')}}" class="border--round" />
-                        <h4>Networking - classic, Secret company</h4>
+                        <h4>Cree votre boutique</h4>
 
                         <p>
-                            Groupe de collegue d'une entreprise mystére nous convions un autre groupe à venir se joindre à nous.
-                            Au programme, repas et boissons sur un rooftop de paris. Venez tentez l'aventure entre collegues
+                            Renseignez votre inventaire afin de créer une veritable boutique d'objets et réaliser un maximum de troc !
                         </p>
                     </div>
                 </div>
@@ -226,55 +181,19 @@
         </div>
         <!--end of container-->
     </section>
-    <section class="bg--secondary">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="feature">
-                        <i class="icon icon-Sidebar-Window color--primary"></i>
-                        <h4>Facile</h4>
-                        <p>
-                            Crée des évenements, groupes, rencontrer d'autres entreprises, s'organiser..
-                            Aujourd'hui vous pouvez faire tout cela avec une facilité déconsertante !
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature">
-                        <i class="icon icon-Duplicate-Window color--primary"></i>
-                        <h4>On respecte votre vie privé</h4>
-                        <p>
-                            Site crée par des étudiants en alternance, Open source ( le code est disponible ), le projet est aussi visible sur github. Nous ne voulons pas devenir riche sur votre dos mais nous voulons amélioré la vie sociale de tout les employées du monde entier. Nous n'avons rien à cacher, tout à offrir !
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature">
-                        <i class="icon icon-Code-Window color--primary"></i>
-                        <h4>Venez nous aider !</h4>
-                        <p>
-                            Vous pouvez améliorer le site !!
-                            Oui, oui.. peut importe votre domaine de compétance vous saurrez trouvé des points d'améliorations.
-                            Le premier site crée par les employées pour les employées.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!--end of row-->
-        </div>
 
         {% endblock %}
         <!--end of container-->
-    </section>
+
     <section class="text-center">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-8">
                     <h2>Combien ça coute ? </h2>
                     <p class="lead">
-                        Rien du tout ! 0euro ! évidament toute les fonctionnalitées du site sont gratuite et le seront toujours !
+                        Rien du tout ! 0euro ! Évidemment toutes les fonctionnalitées du site sont gratuites et le seront toujours !
                     </p>
-                    <p>Mais faire un site n'est pas gratuit pour autant donc nous ne refuseront j'amais une donnation peut importe de quel montant elle est ! <a href="index.html">donner ici </a> </p>
+                    <p>Renseignez vos objets à échanger, et contactez d'autres inscrits afin d'établir un troc !</p>
                 </div>
             </div>
             <!--end of row-->
@@ -287,33 +206,9 @@
     <footer class="footer-7 text-center-xs bg--secondary  ">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                            <span class="type--fine-print">&copy;
-                                <span class="update-year"></span> After-tech &mdash; All Rights Reserved</span>
-                </div>
-                <div class="col-md-6 text-right text-center-xs">
-                    <ul class="social-list list-inline">
-                        <li>
-                            <a href="#">
-                                <i class="socicon socicon-google icon icon--xs"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="socicon socicon-twitter icon icon--xs"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="socicon socicon-facebook icon icon--xs"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="socicon socicon-instagram icon icon--xs"></i>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="col-md-12">
+                        <span class="type--fine-print">&copy;
+                        <span class="update-year"></span> Troc &mdash; All Rights Reserved</span>
                 </div>
             </div>
             <!--end of row-->

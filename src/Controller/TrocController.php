@@ -24,6 +24,8 @@ use App\Form\EchangeType;
 use Doctrine\ORM\UserRepository;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use App\Service\MailService;
+
 
 
 /**
@@ -42,6 +44,8 @@ class TrocController extends AbstractController
 
     $demandeByUser = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userAcheteur'=> $user));
 
+
+
         return $this->render('echange/echangeByUser.html.twig', array(
             'demandeByUser' => $demandeByUser
 
@@ -57,7 +61,9 @@ class TrocController extends AbstractController
 
         $user =  $this->getUser();
 
-        $demandeByVendeur = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userVendeur'=> $user));
+        $demandeByVendeur = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userVendeur'=> $user, 'statue' => 1));
+
+
 
         return $this->render('echange/echangeByVendeur.html.twig', array(
             'demandeByVendeur' => $demandeByVendeur
@@ -65,6 +71,55 @@ class TrocController extends AbstractController
         ));
 
     }
+
+
+
+    /**
+     * @Route("/accepter/{echange}", name="accepter_proposition")
+     *
+     */
+    public function accepterEchangeAction(Echange $echange, MailService $mailService){
+
+
+        $objAcheter =$echange->getObjectAchteur();
+
+        $objVendeur = $echange->getObjectVendeur();
+
+        $echange->setStatue(2);
+        $em = $this->getDoctrine()->getManager();
+        $objVendeur->removeAt();
+        $objAcheter->removeAt();
+        $em->merge($echange);
+        $em->flush();
+
+        $mailService->notificationMail(true, $echange);
+
+
+
+       return $this->redirectToRoute('troc_proposition');
+
+    }
+
+
+    /**
+     * @Route("/refuser/{echange}", name="refuser_proposition")
+     *
+     */
+    public function refuserEchangeAction(Echange $echange, MailService $mailService){
+
+
+        $em = $this->getDoctrine()->getManager();
+
+        $em->remove($echange);
+        $em->flush();
+
+        $mailService->notificationMail(false, $echange);
+
+
+        return $this->redirectToRoute('troc_proposition');
+
+    }
+
 
 
 

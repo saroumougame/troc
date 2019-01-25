@@ -39,7 +39,18 @@
                         <div class="card product_item">
                             <div class="body">
                                 <div class="cp_img">
-                                    <img src="{{ asset('assets/Oreo/images/ecommerce/1.png') }}" alt="Product" class="img-fluid" />
+
+
+                                    {% if allObjets.namePhoto is not null %}
+
+
+                                        <img src="{{ asset('assets/files/photo/objet/')~ allObjets.namePhoto }}" alt="Product" class="img-fluid" />
+
+                                    {% else %}
+                                        <img src="{{ asset('assets/Oreo/images/ecommerce/1.png') }}" alt="Product" class="img-fluid" />
+                                    {% endif %}
+
+
                                     <div class="hover">
                                         <a href="{{ path('objet_detail', {'objet': allObjets.id}) }}" class="btn btn-primary waves-effect"><i class="zmdi zmdi-plus"></i></a>
                                     </div>

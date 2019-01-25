@@ -1,152 +1,170 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sridar
- * Date: 03/10/2018
- * Time: 10:54
- */
 
 namespace App\Controller;
 
-
-use App\Form\ObjetType;
-
+use App\Entity\Entreprise;
+use App\Entity\UserGroupe;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use App\Entity\Objet;
+use App\Entity\Groupe;
+use App\Entity\User;
+use App\Entity\Event;
 use Symfony\Component\HttpFoundation\Request;
+use Doctrine\ORM\UserRepository;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Doctrine\ORM\EntityRepository;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use App\Entity\Echange;
 
+use App\Entity\Objet;
 
 /**
  * @Route("/profile")
  */
-class ProfileController extends AbstractController
+class ProfileController extends Controller
 {
 
 
-
     /**
-     * @Route("/", name="profile")
+     * @Route("/show", name="profile_show")
      */
-    public function indexAction(){
-
-//@TODO Editer son profile
-
-}
+    public function showAction()
+    {
 
 
-
-
-
-    /**
-     * @Route("/object/add", name="add_object")
-     */
-    public function addObjetAction(Request $request){
-
-
-        $objet = new Objet();
-
-        $form = $this->createForm(ObjetType::class, $objet,array(
-            'action' => $this->generateUrl('add_object'),
-            'method' => 'POST',
-
-        ));
-
-
-        $form->handleRequest($request);
-
-        if($form->isSubmitted() && $form->isValid()){
-            $user = $this->getUser();
-            $formData = $form->getData();
-             $entityManager = $this->getDoctrine()->getManager();
-             $formData->setUser($user);
-             $entityManager->persist($formData);
-             $entityManager->flush();
-        }
-
-        return $this->render('profile/addObject.html.twig', array(
-            'form' => $form->createView()
-
-        ));
-
-    }
-
-    /**
-     * @Route("/object/show", name="show_object")
-     */
-    public function showAction(){
-
-
-       $userObjet = $this->getDoctrine()->getRepository(Objet::class)->findBy(array('user'=>1));
-
-        dump($userObjet);
-
-
-        return $this->render('profile/showObject.html.twig', array(
-            'userObjet' => $userObjet,
-
-        ));
-
-    }
-
-
-    /**
-     * @Route("/object/detail/{objet}", name="detail_object")
-     */
-    public function detailAction(Objet $objet){
-
-
-        return $this->render('profile/detailObject.html.twig', array(
-            'objet' => $objet,
-
-        ));
-
-    }
-
-    /**
-     * @Route("/object/edit/{objet}", name="edit_object")
-     */
-    public function edit(Request $request, Objet $objet){
-
-        $form = $this->createForm(ObjetType::class, $objet,array(
-            'action' => $this->generateUrl('edit_object',array('objet' => $objet->getId())),
-            'method' => 'POST',
-
-        ));
-
-
-        $form->handleRequest($request);
-        if($form->isSubmitted() && $form->isValid()){
-            $formData = $form->getData();
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($formData);
-            $entityManager->flush();
-        }
-
-
-        return $this->render('profile/editObject.html.twig', array(
-            'form' => $form->createView()
-
-        ));
-
-    }
-
-
-    /**
-     * @Route("/object/delete/{objet}", name="delete_object")
-     */
-    public function deleteAction(Objet $objet){
-//@TODO securiser le delete
+        $User = $this->getUser();
+        $formUser = $this->getForm($User);
         $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->remove($objet);
-        $entityManager->flush();
+//        $eventUser = $entityManager->getRepository(Event::class)->findBy(array('useradd' => $this->getUser()->getId()), null, 5);
+//        $nbUser = $this->statUser($User, $entityManager);
+
+        $demandeByVendeur = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userVendeur'=> $User, 'statue' => 2));
+
+
+
+        $demandeByUser = $this->getDoctrine()->getRepository(Echange::class)->findBy(array('userAcheteur'=> $User, 'statue' => 2));
+
+
+
+        return $this->render('profile/index.html.twig', array(
+            'histTrocPropo' => $demandeByVendeur,
+            'histTrocDemande' => $demandeByUser,
+//   'User' => $User,
+//            'eventUser' => $eventUser,
+            'formUser' => $formUser->createView(),
+//            'nbEvent' => $nbUser,
+        ));
+    }
+
+
+    /**
+     * @Route("/update", name="profile_update")
+     */
+    public function updateAction(Request $request)
+    {
+        $User = $this->getUser();
+        $formUser = $this->getForm($User);
+        $formUser->handleRequest($request);
+        if ($formUser->isSubmitted()) {
+
+            $UpdateUser = $formUser->getData();
+            $User->setUsername($UpdateUser->getUsername());
+            $User->setEmail($UpdateUser->getEmail());
+
+            /* ---------- */
+
+
+            $file = $UpdateUser->getPhoto();
+            $someNewFilename = $file->getClientOriginalName();
+            $directory = $this->getParameter('path_photo_profil');
+            $file->move($directory, $someNewFilename);
+            $User->setNamePhoto($someNewFilename);
+
+
+            /* ---------- */
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($User);
+            $entityManager->flush();
+            return $this->redirect($this->generateUrl('profile_show'));
+
+
+
+        }
+
+        return $this->render('Profile/index.html.twig', array(
+//   'User' => $User,
+//            'eventUser' => $eventUser,
+            'formUser' => $formUser->createView(),
+//            'nbEvent' => $nbUser,
+        ));
+
 
     }
 
 
 
 
+    public function getForm($User)
+    {
+        $form = $this->createFormBuilder($User, array(
+            'action' => $this->generateUrl('profile_update'),
+            'method' => 'POST',
+        ));
+        $form->add("email", TextType::class,
+            array(
+                'label' => 'Modifier mon adresse e-mail',
+                'attr' => array(
+                    'class' => 'form-control'
+                )
+            )
+        )
+            ->add('photo', FileType::class,
+                array(
+                    'label' => 'Modifier ma photo de profil',
+                    'attr' => array(
+                        'class' => 'form-control input-b2'
+                    )
+                )
+            )
+            ->add('submit', SubmitType::class,
+                array(
+                    'label' => 'Valider',
+                    'attr' => array(
+                        'class' => 'btn btn-primary btn-round waves-effect p-3 mt-3'))
+            );
+        return $form->getForm();
+    }
 
 
+    /**
+     * @Route("/amis/{user}", name="profile_amis_detail")
+    */
+    public function showAmisAction(User $user)
+    {
+
+        $userObjet = $this->getDoctrine()->getRepository(Objet::class)->findBy(array('user'=>  $user->getId()));
+
+        $userObjet = $this->getDoctrine()->getRepository(Objet::class)->findBy(array('user'=>  $user->getId()));
+
+        return $this->render('profile/detail.html.twig', array(
+            'user' => $user,
+            'allObjet' => $userObjet
+        ));
+    }
+
+
+
+
+//    private function statUser($User, $entityManager)
+//    {
+//        $eventUsercount = $entityManager->getRepository(Event::class)->findBy(array('useradd' => $this->getUser()->getId()));
+//        $nbUser = count($eventUsercount);
+//        return $nbUser;
+//    }
 }

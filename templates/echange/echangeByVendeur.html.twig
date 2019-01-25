@@ -18,33 +18,75 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Mes produits
+                    <h2>Propositions de troc reçues
                         <small>Proposition de troc pour mes produits</small>
                     </h2>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
                     <ul class="breadcrumb float-md-right">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i>Accueil</a></li>
-                        <li class="breadcrumb-item"><a href="ec-dashboard.html">Groupe</a></li>
-                        <li class="breadcrumb-item active">Produit</li>
+                        <li class="breadcrumb-item"><a href="{{ path('home') }}"><i class="zmdi zmdi-home"></i>Accueil</a></li>
+                        <li class="breadcrumb-item active">Propositions de troc reçues</li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="row clearfix">
-
-                {% for demandeByVendeurs in demandeByVendeur %}
-
-                    {{ dump(demandeByVendeurs) }}
 
 
-                {% endfor %}
+        <!-- Bordered Table -->
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header">
+                        <h2><strong>En attente de confirmation</strong></h2>
+
+                    </div>
+                    <div class="body table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Objet proposé</th>
+                                <th>Objet demandé</th>
+                                <th>Nom d'utilisateur</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            {% for demandeByVendeurs in demandeByVendeur %}
 
 
+                                <tr>
+                                    <th scope="row"><a href="{{ path('objet_detail', {'objet': demandeByVendeurs.objectVendeur.id}) }}"> {{ demandeByVendeurs.objectAchteur.nom }}</a>   </th>
+                                    <td><a href="{{ path('objet_detail', {'objet': demandeByVendeurs.objectVendeur.id}) }}">{{ demandeByVendeurs.objectVendeur.nom }}</a> </td>
+                                    <td>{{ demandeByVendeurs.userVendeur.username }}</td>
+                                    <td>{{ demandeByVendeurs.created|date("m/d/Y") }}</td>
+                                    <td>  <a href="{{ path('accepter_proposition', {'echange': demandeByVendeurs.id}) }}">Accepter</a> <a href="{{ path('refuser_proposition', {'echange': demandeByVendeurs.id}) }}">Refuser</a> </td>
+                                </tr>
+
+
+                            {% endfor %}
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
             </div>
         </div>
-        </div>
+
+
+
+        <!-- #END# Bordered Table -->
+
+
+
+
+
+
+
+
+
     </section>
 
 

@@ -18,31 +18,65 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Mes demande
-                        <small>Mes demande de troc</small>
+                    <h2>Mes demandes de troc
                     </h2>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
                     <ul class="breadcrumb float-md-right">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i>Accueil</a></li>
-                        <li class="breadcrumb-item"><a href="ec-dashboard.html">Groupe</a></li>
-                        <li class="breadcrumb-item active">Produit</li>
+                        <li class="breadcrumb-item"><a href="{{ path('home') }}"><i class="zmdi zmdi-home"></i>Accueil</a></li>
+                        <li class="breadcrumb-item active">Mes demandes de troc</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="container-fluid">
+
+            <!-- Bordered Table -->
             <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2><strong>En attente de confirmation</strong> 
+                        </div>
+                        <div class="body table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Mon objet</th>
+                                    <th>Objet demandé</th>
+                                    <th>Nom d'utilisateur</th>
+                                    <th>Date</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
 
-                {% for demandeByUsers in demandeByUser %}
 
-                   {{ dump(demandeByUsers) }}
-
-
-                {% endfor %}
+                                {% for demandeByUsers in demandeByUser %}
 
 
+                                    <tr>
+                                        <th scope="row">{{ demandeByUsers.objectAchteur.nom }}</th>
+                                        <td>{{ demandeByUsers.objectVendeur.nom }}</td>
+                                        <td>{{ demandeByUsers.userVendeur.username }}</td>
+                                        <td>{{ demandeByUsers.created|date("m/d/Y") }}</td>
+                                        <td>Annuler</td>
+                                    </tr>
+
+
+
+
+                                {% endfor %}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- #END# Bordered Table -->
+
+
         </div>
         </div>
     </section>

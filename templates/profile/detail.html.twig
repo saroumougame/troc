@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block content %}
+    <section class="content blog-page">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>       {{ user.username }}
+                    </h2>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <ul class="breadcrumb float-md-right">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i>Profil</a></li>
+                        <li class="breadcrumb-item active"><a href="blog-dashboard.html">Profil</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="row clearfix">
+
+                {% for allObjets in allObjet %}
+                    <div class="col-lg-3 col-md-4 col-sm-12">
+                        <div class="card product_item">
+                            <div class="body">
+                                <div class="cp_img">
+
+
+                                    {% if allObjets.namePhoto is not null %}
+
+
+                                        <img src="{{ asset('assets/files/photo/objet/')~ allObjets.namePhoto }}" alt="Product" class="img-fluid" />
+
+                                    {% else %}
+                                        <img src="{{ asset('assets/Oreo/images/ecommerce/1.png') }}" alt="Product" class="img-fluid" />
+                                    {% endif %}
+
+
+                                    <div class="hover">
+                                        <a href="{{ path('objet_detail', {'objet': allObjets.id}) }}" class="btn btn-primary waves-effect"><i class="zmdi zmdi-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product_details">
+                                    <h5><a href="ec-product-detail.html">{{ allObjets.nom }}</a></h5>
+                                    <ul class="product_price list-unstyled">
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+
+
+
+        {#<div class="container-fluid">#}
+            {#<div class="row">#}
+                {#<div class="col-lg-8 col-md-12">#}
+                    {#<div class="card profile-header">#}
+                        {#<div class="body">#}
+                            {#<div class="row">#}
+                                {#<div class="col-lg-3 col-md-3 col-12">#}
+                                    {#<div class="profile-image">#}
+
+                                        {#{% if user.namePhoto is not null %}#}
+                                            {#<img src="{{ asset('assets/files/')~ user.namePhoto  }}" alt="">#}
+                                        {#{% else %}#}
+                                            {#<div class="profile-image"> <img src="{{ asset('assets/Oreo/images/profile_av.jpg') }}" alt=""> </div>#}
+                                        {#{% endif %}#}
+
+
+
+                                    {#</div>#}
+                                {#</div>#}
+
+
+                            {#</div>#}
+                        {#</div>#}
+                    {#</div>#}
+
+                {#</div>#}
+
+            {#</div>#}
+        {#</div>#}
+
+
+
+
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}
